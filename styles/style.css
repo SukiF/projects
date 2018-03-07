@@ -1,0 +1,243 @@
+
+
+header{
+
+}
+@font-face {
+    font-family: 'AbrahamLincoln';
+    src: url('fonts/abrahamlincoln-webfont.woff2') format('woff2'),
+         url('fonts/abrahamlincoln-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h1
+{
+  color:#ffa800;
+  font-family: AbrahamLincoln;
+  font-weight: 100;
+}
+
+h2
+{
+  color:#ffffff;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: bold;
+  letter-spacing:2px;
+  border: 1px solid #ffffff;
+  width: 75px;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  padding: 4px;
+}
+aside
+{
+  margin:0;
+  padding:0;
+}
+
+.top
+{
+ font-size: 50px;
+}
+
+.top-section
+{
+  background-image: url("../img/background1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  font-family: AbrahamLincoln;
+  height: 800px;
+  text-align: center;
+}
+
+.top-nav
+{
+  font-size: 10px;
+  letter-spacing:2px;
+  word-spacing: 40px;
+  font-family: AbrahamLincoln;
+}
+
+.phone
+{
+  position:absolute;
+  right:30px;
+  top:0;
+}
+
+.side-nav
+{
+  font-size: 8px;
+  transform: rotate(-90deg);
+  position:absolute;
+  top:400px;
+  right:-72px;
+  word-spacing: 20px;
+}
+.scroll
+{
+  text-align:center;
+}
+.whtRect
+{
+  align-content: center;
+}
+.section2
+{
+background-color:#694fca;
+color:#ffffff;
+height:800px;
+text-align: center;
+}
+.we-bring
+{
+  font-family: AbrahamLincoln;
+  font-size: 18px;
+  letter-spacing:2px;
+}
+.headshot
+{
+padding:20px;
+width: 100px;
+height: 100px;
+}
+
+.testimonials
+{
+ margin: auto;
+ width:80%;
+ text-align: center;
+}
+.test1
+{
+box-sizing: border-box;
+height: 400px;
+width:200px;
+width: 25%;
+background-color: #ffffff;
+float: left;
+margin: 20px;
+border: 20px:
+}
+
+.test2
+{
+box-sizing: border-box;
+height: 400px;
+width:200px;
+width: 25%;
+background-color: #694fca;
+float:left;
+box-shadow: 0px 10px 20px #797d7f;
+margin: 20px;
+border: 20px:
+}
+
+.test3
+{
+box-sizing: border-box;
+height: 400px;
+width:200px;
+width: 25%;
+background-color: #ffffff;
+float: left;
+margin: 20px;
+border: 20px:
+}
+
+.testText
+{
+font-family:Georgia;
+font-size: 16px;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.TestName1
+{
+  color:#000000;
+  font-family:Roboto;
+  font-weight:bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+  padding-top: 10px;
+  margin:0px;
+}
+
+.TestCity1
+{
+  color:#c6c6c6;
+  font-family:Roboto;
+  font-weight:100;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin: 3px;
+}
+.TestName2
+{
+  color:#ffa800;
+  font-family:Roboto;
+  font-weight:bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+  padding-top: 10px;
+  margin:0px;
+}
+
+.TestCity2
+{
+  color:#ffa800;
+  font-family:sans-serif;
+  font-weight:100;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin:3px;
+}
+
+.section3
+{
+  background-image: url("../img/WeAreUnity.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  font-family: AbrahamLincoln;
+  height: 700px;
+  text-align: center;
+}
+
+.section4
+{
+background-color:#ffffff;
+color:#000000;
+height: 900px;
+}
+
+.section5
+{
+  background-image: url("../img/SnowScene.png");
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+  font-family: AbrahamLincoln;
+  height:2560px;
+  text-align: center;
+}
+.section6
+{
+background-color:#212121;
+color:#ffffff;
+height:400px;
+}
+#yellow-dash
+{
+  margin-right: 8px;
+}
+#two-dash
+{
+  margin-left: 8px;
+}
