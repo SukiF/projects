@@ -73,7 +73,7 @@ aside
   background-size: cover;
   background-position: center;
   color: #ffffff;
-  font-family: AbrahamLincoln;
+  font-family: "AbrahamLincoln";
   height: 800px;
   text-align: center;
   margin: 0;
@@ -84,7 +84,7 @@ aside
   font-size: 10px;
   letter-spacing:2px;
   padding:0px;
-  font-family: AbrahamLincoln;
+  font-family: "AbrahamLincoln";
 }
 
 .UlNav{
@@ -109,15 +109,15 @@ margin-right: 35px;
 
 .frame1Text
 {
-  margin: auto;
-  width: 51%;
+  margin: 2px auto;
+  width: 52%;
   z-index: 1;
 }
 
 .subText
 {
   font-size: 15px;
-  font-family: AbrahamLincoln;
+  font-family: "AbrahamLincoln";
   /* margin-top: 5px; */
 }
 
@@ -173,11 +173,12 @@ margin-top: 27px;
 background-color:#694fca;
 color:#ffffff;
 height:670px;
+overflow: auto;
 }
 
 .we-bring
 {
-  font-family: AbrahamLincoln;
+  font-family: "AbrahamLincoln";
   font-weight: lighter;
   font-size: 20px;
   letter-spacing:4px;
@@ -202,6 +203,7 @@ height:670px;
   height: auto;
   width:54%;
   margin: 30px auto;
+  /* position:fixed; */
 }
 
 .frame2size
@@ -220,73 +222,69 @@ height:670px;
 }
 .Complexity
 {
-  margin-top: 145px;
+  margin: 125px auto 0;
   font-weight: 100;
   position:relative;
-  left: calc((100vw - 550px)/2);
-}
+  width: 56%;
 
+  /* left: calc((100vw - 550px)/2); */
+}
+.Complexity h3
+{
+  display:inline-block;
+}
 .story
 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 9px;
   font-weight: 100;
-  position:relative;
-  left: calc((100vw - 550px)/2);
-}
+  line-height: 20px;
+  margin-left:50px;
+  margin-bottom: 50px;
+  position: relative;
+  display:inline-block;
 
+}
+.story1
+{
+  font-family: "Montserrat";
+  font-size: 9px;
+  font-weight: 100;
+  margin-right: 30px;
+  position:relative;
+
+}
 .story2
 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   color: #000000;
   font-size: 10px;
   font-weight: 100;
   line-height: 17px;
 }
-
-.handmade
+.ColumnWrapper
 {
-  box-sizing: border-box;
-  height:150px;
-  width:75px;
-  width: 25%;
-  background-color: none;
-  float: left;
-  margin: 10px;
-  border: 10px:
+width: 56%;
+margin:10px auto;
+height:auto;
 }
-
-.mortarboard
+.column
 {
   box-sizing: border-box;
   height:150px;
-  width:75px;
-  width: 25%;
+  width: 33%;
   background-color: none;
+  position:relative;
   float: left;
-  margin: 10px;
-  border: 10px:
-}
-
-.support
-{
-  box-sizing: border-box;
-  height:150px;
-  width:75px;
-  width: 25%;
-  background-color: none;
-  float: left;
-  margin: 10px;
-  border: 10px:
+  display:inline-block;
 }
 
 .dashedLines
 {
   box-sizing: border-box;
-  width: 100%;
+  width: 5%;
   background-color: none;
-  float: left;
-  margin: 10px;
+  margin: 10px auto;
   border: 10px:
 }
 
@@ -363,7 +361,7 @@ padding-left: 15px;
 .TestName1
 {
   color:#000000;
-  font-family:Roboto;
+  font-family:"Roboto";
   font-weight:bold;
   letter-spacing: 2px;
   font-size: 13px;
@@ -374,7 +372,7 @@ padding-left: 15px;
 .TestCity1
 {
   color:#c6c6c6;
-  font-family:Roboto;
+  font-family:"Roboto";
   font-weight:100;
   letter-spacing: 1px;
   font-size: 12px;
@@ -384,7 +382,7 @@ padding-left: 15px;
 .TestName2
 {
   color:#ffa800;
-  font-family:Roboto;
+  font-family:"Roboto";
   font-weight:bold;
   letter-spacing: 2px;
   font-size: 13px;
