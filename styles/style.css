@@ -7,14 +7,15 @@ header{
     font-family: 'AbrahamLincoln';
     src: url('fonts/abrahamlincoln-webfont.woff2') format('woff2'),
          url('fonts/abrahamlincoln-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    /* font-weight: normal;
+    font-style: normal; */
 }
 h1
 {
   color:#ffa800;
   font-family: AbrahamLincoln;
-  font-weight: 100;
+  font-weight: lighter;
+  font-size: 48px;
 }
 
 h2
@@ -30,6 +31,29 @@ h2
   margin-top: 20px;
   margin-bottom: 35px;
   padding: 4px;
+}
+h3
+{
+  color:#ffffff;
+  font-size: 45px;
+  font-family: AbrahamLincoln;
+  font-weight: 100;
+  letter-spacing:1px;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  line-height: 40px;
+}
+h4
+{
+  color:#ffa800;
+  font-size: 15px;
+  font-family: AbrahamLincoln;
+  font-weight: 100;
+  letter-spacing:1px;
+  margin:auto;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 aside
 {
@@ -52,14 +76,56 @@ aside
   font-family: AbrahamLincoln;
   height: 800px;
   text-align: center;
+  margin: 0;
 }
 
 .top-nav
 {
   font-size: 10px;
   letter-spacing:2px;
-  word-spacing: 40px;
+  padding:0px;
   font-family: AbrahamLincoln;
+}
+
+.UlNav{
+  list-style-type: none;
+
+margin:0;
+  padding:0px;
+}
+
+.UlNav li
+{
+display: inline;
+margin-right: 35px;
+}
+
+.purpleInvite
+{
+  text-align: left;
+  padding-top:40px;
+  z-index: 0;
+}
+
+.frame1Text
+{
+  margin: auto;
+  width: 51%;
+  z-index: 1;
+}
+
+.subText
+{
+  font-size: 15px;
+  font-family: AbrahamLincoln;
+  /* margin-top: 5px; */
+}
+
+.honor
+{
+  margin-top:140px;
+  margin-bottom: 0;
+  padding-top: 0;
 }
 
 .phone
@@ -71,39 +137,175 @@ aside
 
 .side-nav
 {
-  font-size: 8px;
+  font-size: 7px;
   transform: rotate(-90deg);
   position:absolute;
-  top:400px;
-  right:-72px;
-  word-spacing: 20px;
+  top: 315px;
+  right:-82px;
+  word-spacing: 35px;
+  letter-spacing: 2px;
 }
+
 .scroll
 {
   text-align:center;
+  margin-top: 115px;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
+
 .whtRect
 {
+  width: 32px;
+  height: 32px;
   align-content: center;
 }
+
+.dwnArrow
+{
+width: 11px;
+height: 11px;
+margin-top: 27px;
+}
+
 .section2
 {
 background-color:#694fca;
 color:#ffffff;
-height:800px;
-text-align: center;
+height:670px;
 }
+
 .we-bring
 {
   font-family: AbrahamLincoln;
-  font-size: 18px;
-  letter-spacing:2px;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing:4px;
+  margin-top: 10px;
 }
+
+.frame1
+{
+  height: auto;
+  width:54%;
+  margin: 30px auto;
+  z-index: 25;
+}
+
+.frame1size
+{
+    height:415px;
+}
+
+.frame2
+{
+  height: auto;
+  width:54%;
+  margin: 30px auto;
+}
+
+.frame2size
+{
+  height:415px;
+}
+
+.frame3
+{
+  height: auto;
+}
+
+.frame3size
+{
+  height:415px;
+}
+.Complexity
+{
+  margin-top: 145px;
+  font-weight: 100;
+  position:relative;
+  left: calc((100vw - 550px)/2);
+}
+
+.story
+{
+  font-family: Montserrat;
+  font-size: 9px;
+  font-weight: 100;
+  position:relative;
+  left: calc((100vw - 550px)/2);
+}
+
+.story2
+{
+  font-family: Montserrat;
+  color: #000000;
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 17px;
+}
+
+.handmade
+{
+  box-sizing: border-box;
+  height:150px;
+  width:75px;
+  width: 25%;
+  background-color: none;
+  float: left;
+  margin: 10px;
+  border: 10px:
+}
+
+.mortarboard
+{
+  box-sizing: border-box;
+  height:150px;
+  width:75px;
+  width: 25%;
+  background-color: none;
+  float: left;
+  margin: 10px;
+  border: 10px:
+}
+
+.support
+{
+  box-sizing: border-box;
+  height:150px;
+  width:75px;
+  width: 25%;
+  background-color: none;
+  float: left;
+  margin: 10px;
+  border: 10px:
+}
+
+.dashedLines
+{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: none;
+  float: left;
+  margin: 10px;
+  border: 10px:
+}
+
+.love
+{
+  color:#000000;
+  margin: 0;
+}
+
 .headshot
 {
 padding:20px;
 width: 100px;
 height: 100px;
+}
+
+.roundButton
+{
+  width: 125px;
 }
 
 .testimonials
@@ -112,6 +314,7 @@ height: 100px;
  width:80%;
  text-align: center;
 }
+
 .test1
 {
 box-sizing: border-box;
@@ -177,6 +380,7 @@ padding-left: 15px;
   font-size: 12px;
   margin: 3px;
 }
+
 .TestName2
 {
   color:#ffa800;
@@ -214,30 +418,35 @@ padding-left: 15px;
 {
 background-color:#ffffff;
 color:#000000;
-height: 900px;
+height: 100px;
 }
 
 .section5
 {
   background-image: url("../img/SnowScene.png");
-  background-size: cover;
+  background-size: 1200px;
   background-position: center;
   color: #000000;
   font-family: AbrahamLincoln;
   height:2560px;
   text-align: center;
 }
+
 .section6
 {
 background-color:#212121;
 color:#ffffff;
 height:400px;
 }
+
 #yellow-dash
 {
-  margin-right: 8px;
+  margin-right: 4px;
+  width: 17px;
 }
+
 #two-dash
 {
-  margin-left: 8px;
+  margin-left: 4px;
+  width: 17px;
 }
