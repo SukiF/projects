@@ -10,6 +10,11 @@ header{
     /* font-weight: normal;
     font-style: normal; */
 }
+
+body
+{
+  margin: 0px 0px 0px 0px;
+}
 h1
 {
   color:#ffa800;
@@ -18,7 +23,8 @@ h1
   font-size: 48px;
 }
 
-h2
+
+.top h2
 {
   color:#ffffff;
   font-size: 16px;
@@ -28,10 +34,30 @@ h2
   border: 1px solid #ffffff;
   width: 75px;
   margin:auto;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 35px;
   padding: 4px;
 }
+.footer h2
+{
+  color:#ffffff;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: bold;
+  letter-spacing:2px;
+  border: 1px solid #ffffff;
+  width: 75px;
+  margin:auto;
+  /* margin-top: 20px; */
+  margin-bottom: 35px;
+  padding: 4px;
+}
+.top
+{
+  font-size: 50px;
+  margin-top: 0px;
+}
+
 h3
 {
   color:#ffffff;
@@ -39,11 +65,12 @@ h3
   font-family: AbrahamLincoln;
   font-weight: 100;
   letter-spacing:1px;
-  margin:auto;
+  /* margin:auto; */
   margin-top: 20px;
   margin-bottom: 0px;
   line-height: 40px;
 }
+
 h4
 {
   color:#ffa800;
@@ -51,23 +78,33 @@ h4
   font-family: AbrahamLincoln;
   font-weight: 100;
   letter-spacing:1px;
-  margin:auto;
+  /* margin:auto; */
   margin-top: 10px;
   margin-bottom: 0px;
 }
 aside
 {
-  margin:0;
-  padding:0;
+  margin:0px;
+  padding:0px;
 }
+
+/* .wrapper
+{
+  width:1920px: */
+/* } */
 .textColorWht
 {
   color: #ffffff
 }
-.top
+
+.RobotoText
 {
- font-size: 50px;
+  color:#ffffff;
+  font-size: 12px;
+  font-family: "Roboto";
+  line-height: 30px;
 }
+
 
 .top-section
 {
@@ -79,7 +116,7 @@ aside
   font-family: "AbrahamLincoln";
   height: 800px;
   text-align: center;
-  margin: 0;
+  margin: 0px;
 }
 
 .top-nav
@@ -93,7 +130,7 @@ aside
 .UlNav{
   list-style-type: none;
 
-margin:0;
+margin:0px;
   padding:0px;
 }
 
@@ -127,20 +164,20 @@ margin-right: 35px;
 {
   font-size: 15px;
   font-family: "AbrahamLincoln";
-  margin:0;
+  margin:0px;
 }
 .honor1
 {
   margin-top:140px;
-  margin-bottom: 0;
-  padding-top: 0;
+  margin-bottom: 0px;
+  padding-top: 0px;
 }
 
 .phone
 {
   position:absolute;
   right:30px;
-  top:0;
+  top:0px;
 }
 
 .side-nav
@@ -240,7 +277,7 @@ overflow-y:hidden;
 }
 .Complexity
 {
-  margin: 125px auto 0;
+  margin: 125px auto 0px;
   font-weight: 100;
   position:relative;
   width: 56%;
@@ -284,7 +321,7 @@ overflow-y:hidden;
   font-size: 12px;
   font-weight: 100;
   line-height: 17px;
-  margin: 12px 0 16px 0;
+  margin: 12px 0px 16px 0px;
 }
 .ColumnWrapper
 {
@@ -315,19 +352,19 @@ height:auto;
 .love
 {
   color:#000000;
-  margin: 0;
+  margin: 0px;
   width: 300px;
   padding-top: 115px;
 }
 .global{
   padding-top: 688px;
-  margin:0;
+  margin:0px;
   color:#000000;
 }
 
 .vertLine3
 {
-  margin:20px 0 20px 0;
+  margin:20px 0px 20px 0px;
 }
 .headshot
 {
@@ -342,11 +379,7 @@ height: auto;
  width:35%;
  height:auto;
 }
-/*
-.headStars
-{
 
-} */
 .roundButton
 {
   width: 140px;
@@ -355,7 +388,7 @@ height: auto;
 
 .testimonials
 {
- margin: 0 24px 0 auto;
+ margin: 0px 24px 0px auto;
  width:80%;
  text-align: center;
 }
@@ -391,7 +424,6 @@ width: 25%;
 background-color: #ffffff;
 float: left;
 margin: 8px;
-
 }
 
 .testText1
@@ -467,7 +499,7 @@ padding-left: 15px;
 .section4
 {
   width:100%;
-  padding:5px 0;
+  padding:5px 0px;
   height:400px;
 }
 
@@ -484,7 +516,7 @@ text-align: right;
 .h1sm
 {
   font-size: 36px;
-  margin:0;
+  margin:0px;
 }
 
 .whatWeDo
@@ -520,17 +552,82 @@ z-index: 50;
   background-repeat: no-repeat;
   color: #000000;
   font-family: AbrahamLincoln;
-  height:1420px;
+  height:1306px;
   text-align: center;
 }
 
-.section6
+.footer
 {
-background-color:#212121;
-color:#ffffff;
-height:400px;
+  background-color:#212121;
+  color:#ffffff;
+  height:1200px;
+}
+.email
+{
+color:#694fca;
+text-decoration: none;
+font-family: "Roboto";
+font-size: 12px;
+letter-spacing: 2px;
+}
+.emailText{
+  border: 1px solid #4d4d4d;
+  width: 250px;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  padding: 10px;
+}
+.button
+{
+  border: 0px  solid;
+  width: 125px;
+  background-color: #694fca;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  padding: 10px;
 }
 
+.purpleDate
+{
+  font-family:"Roboto";
+  font-size:11px;
+  letter-spacing: 2px;
+  color:#694fca;
+  margin-left: 49px;
+}
+
+.AboutUs
+{
+  float:left;
+}
+
+.newsLetter
+{
+  float:left;
+}
+.fromBlog
+{
+  float:left;
+  margin: 0px 0px 0px 0px;
+  width:30%;
+}
+.emailPosition
+{
+  float:right;
+}
+.blogImg
+{
+  height:30px;
+  width:30px;
+  float:left;
+  padding-right: 10px;
+}
+/* .blogPhotoAlign
+{
+  display:inline-block; */
+}
 #yellow-dash
 {
   margin-right: 4px;
