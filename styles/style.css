@@ -279,11 +279,12 @@ overflow-y:hidden;
 }
 .story2
 {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   color: #000000;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 100;
   line-height: 17px;
+  margin: 12px 0 16px 0;
 }
 .ColumnWrapper
 {
@@ -320,6 +321,7 @@ height:auto;
 }
 .global{
   padding-top: 688px;
+  margin:0;
   color:#000000;
 }
 
@@ -329,11 +331,22 @@ height:auto;
 }
 .headshot
 {
-padding:20px;
-width: 100px;
-height: 100px;
+padding:23px;
+width: 40%;
+height: auto;
+
 }
 
+.stars
+{
+ width:35%;
+ height:auto;
+}
+/*
+.headStars
+{
+
+} */
 .roundButton
 {
   width: 140px;
@@ -342,7 +355,7 @@ height: 100px;
 
 .testimonials
 {
- margin: auto;
+ margin: 0 24px 0 auto;
  width:80%;
  text-align: center;
 }
@@ -350,44 +363,50 @@ height: 100px;
 .test1
 {
 box-sizing: border-box;
-height: 400px;
-width:200px;
+height: 250px;
 width: 25%;
 background-color: #ffffff;
 float: left;
-margin: 20px;
-border: 20px:
+margin: 8px;
+
 }
 
 .test2
 {
 box-sizing: border-box;
-height: 400px;
-width:200px;
+height: 250px;
 width: 25%;
 background-color: #694fca;
 float:left;
 box-shadow: 0px 10px 20px #797d7f;
-margin: 20px;
-border: 20px:
+margin: 8px;
+
 }
 
 .test3
 {
 box-sizing: border-box;
-height: 400px;
-width:200px;
+height: 250px;
 width: 25%;
 background-color: #ffffff;
 float: left;
-margin: 20px;
-border: 20px:
+margin: 8px;
+
 }
 
-.testText
+.testText1
 {
 font-family:Georgia;
-font-size: 16px;
+font-size: 10px;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.testText2
+{
+color:#ffffff;
+font-family:Georgia;
+font-size: 10px;
 padding-right: 15px;
 padding-left: 15px;
 }
@@ -398,8 +417,8 @@ padding-left: 15px;
   font-family:"Roboto";
   font-weight:bold;
   letter-spacing: 2px;
-  font-size: 13px;
-  padding-top: 10px;
+  font-size: 7px;
+  padding-top: 5px;
   margin:0px;
 }
 
@@ -409,7 +428,7 @@ padding-left: 15px;
   font-family:"Roboto";
   font-weight:100;
   letter-spacing: 1px;
-  font-size: 12px;
+  font-size: 7px;
   margin: 3px;
 }
 
@@ -419,8 +438,8 @@ padding-left: 15px;
   font-family:"Roboto";
   font-weight:bold;
   letter-spacing: 2px;
-  font-size: 13px;
-  padding-top: 10px;
+  font-size: 7px;
+  padding-top: 5px;
   margin:0px;
 }
 
@@ -430,7 +449,7 @@ padding-left: 15px;
   font-family:sans-serif;
   font-weight:100;
   letter-spacing: 1px;
-  font-size: 12px;
+  font-size: 7px;
   margin:3px;
 }
 
