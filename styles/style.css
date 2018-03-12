@@ -7,13 +7,8 @@ header{
     font-family: 'AbrahamLincoln';
     src: url('fonts/abrahamlincoln-webfont.woff2') format('woff2'),
          url('fonts/abrahamlincoln-webfont.woff') format('woff');
-
 }
 
-body
-{
-  /* margin: 0px 0px 0px 0px; */
-}
 h1
 {
   color:#ffa800;
@@ -24,6 +19,7 @@ h1
 
 .Wrapper
 {
+  width: 1090px;
 }
 
 .top h2
@@ -90,6 +86,11 @@ aside
   color: #ffffff
 }
 
+.textColorGray
+{
+  color: #8b8b8b;
+}
+
 .footerUnity
 {
   color:#ffffff;
@@ -99,13 +100,12 @@ aside
   letter-spacing:2px;
   border: 1px solid #ffffff;
   width: 75px;
-  margin:0px 205px 0px 205px;
+  margin:0px 215px 0px 215px;
   padding: 3px;
 }
 
 .RobotoText
 {
-  color:#8b8b8b;
   font-size: 7px;
   font-family: "Roboto";
   line-height: 16px;
@@ -136,15 +136,15 @@ aside
 {
   font-size: 10px;
   letter-spacing:2px;
-  padding:0px;
+  padding: 0px;
   font-family: "AbrahamLincoln";
 }
 
-.UlNav{
-  list-style-type: none;
-
+.UlNav
+{
+list-style-type: none;
 margin:0px;
-  padding:0px;
+padding:0px;
 }
 
 .UlNav li
@@ -171,14 +171,15 @@ margin-right: 35px;
 {
   font-size: 15px;
   font-family: "AbrahamLincoln";
-  /* margin:0; */
 }
+
 .subText2
 {
   font-size: 15px;
   font-family: "AbrahamLincoln";
   margin:0px;
 }
+
 .honor1
 {
   margin-top:140px;
@@ -233,7 +234,6 @@ color:#ffffff;
 height:670px;
 overflow: auto;
 overflow-y:hidden;
-
 }
 
 .we-bring
@@ -270,6 +270,7 @@ overflow-y:hidden;
 {
   height:430px;
 }
+
 .honor2
 {
   color:#000000;
@@ -288,6 +289,7 @@ overflow-y:hidden;
 {
   height:390px;
 }
+
 .Complexity
 {
   margin: 125px auto 0px;
@@ -298,13 +300,13 @@ overflow-y:hidden;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
-
 }
+
 .Complexity h3
 {
   display:inline-block;
 }
+
 .story
 {
   font-family: "Poppins";
@@ -313,9 +315,8 @@ overflow-y:hidden;
   line-height: 20px;
   margin-left:30px;
   position: relative;
-
-
 }
+
 .story1
 {
   font-family: "Poppins";
@@ -325,8 +326,8 @@ overflow-y:hidden;
   line-height: 20px;
   margin-right: 30px;
   position:relative;
-
 }
+
 .story2
 {
   font-family: "Poppins";
@@ -336,12 +337,14 @@ overflow-y:hidden;
   line-height: 17px;
   margin: 12px 0px 16px 0px;
 }
+
 .ColumnWrapper
 {
 width: 56%;
 margin:10px auto;
 height:auto;
 }
+
 .column
 {
   box-sizing: border-box;
@@ -369,7 +372,9 @@ height:auto;
   width: 300px;
   padding-top: 115px;
 }
-.global{
+
+.global
+{
   padding-top: 688px;
   margin:0px;
   color:#000000;
@@ -379,12 +384,12 @@ height:auto;
 {
   margin:20px 0px 20px 0px;
 }
+
 .headshot
 {
 padding:23px;
 width: 40%;
 height: auto;
-
 }
 
 .stars
@@ -415,7 +420,6 @@ width: 25%;
 background-color: #ffffff;
 float: left;
 margin: 8px;
-
 }
 
 .test2
@@ -427,7 +431,6 @@ background-color: #694fca;
 float:left;
 box-shadow: 0px 10px 20px #797d7f;
 margin: 8px;
-
 }
 
 .test3
@@ -510,8 +513,8 @@ line-height: 16px;
   color: #000000;
   font-family: "AbrahamLincoln";
   height: 738px;
-  /* text-align: center; */
 }
+
 .section4
 {
   width:100%;
@@ -551,16 +554,18 @@ margin: -143px 0px 0px 769px;
 line-height: 56px;
 z-index: 50;
 }
+
 .leftColumn
 {
   float:left;
-
 }
+
 .rightColumn
 {
   float:left;
   margin-left: 60px;
 }
+
 .section5
 {
   background-image: url("../img/SnowScene.png");
@@ -580,12 +585,14 @@ z-index: 50;
   height:55px;
   border-bottom: 1px solid #4a4a4a;
 }
+
 .footer-bottom
 {
   background-color:#212121;
   color:#ffffff;
   height:200px;
 }
+
 .footerNav
 {
   display:inline-block;
@@ -594,8 +601,9 @@ z-index: 50;
 
 .footerImg
 {
-  margin: 2px 4px 2px 0px;
+  margin: 2px 4px 0px 0px;
 }
+
 .email
 {
 color:#694fca;
@@ -607,7 +615,8 @@ float:right;
 margin: 3px 0px -4px 4px;
 }
 
-.emailText{
+.emailText
+{
   border: .01em solid;
   width: 150px;
   margin-top: 7px;
@@ -615,6 +624,7 @@ margin: 3px 0px -4px 4px;
   padding: 3px;
   float: left;
 }
+
 .button
 {
   border: 0px  solid;
@@ -623,9 +633,7 @@ margin: 3px 0px -4px 4px;
   color:#ffffff;
   letter-spacing: 1px;
   text-align: center;
-  margin:auto;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin:10px 10px 10px auto;
   padding: 3px;
   float:left;
 }
@@ -636,7 +644,6 @@ margin: 3px 0px -4px 4px;
   font-size:7px;
   letter-spacing: 2px;
   color:#694fca;
-  /* margin:0px 0px 0px  49px; */
 }
 
 .AboutUs
@@ -653,30 +660,36 @@ width:auto;
 float:left;
 margin: 0px 10px 0px 0px;
 }
+
 .socialMedia
 {
   margin-top:10px;
 }
+
 .newsLetter
 {
   float:left;
   margin: 0px 0px 0px 0px;
   width: 20%;
 }
+
 .fromBlog
 {
   float:left;
   margin: 0px 0px 0px 0px;
   width:22%;
 }
+
 .blog
 {
   float:left;
 }
+
 .emailPosition
 {
   float:right;
 }
+
 .blogImg
 {
   height:30px;
@@ -686,19 +699,22 @@ margin: 0px 10px 0px 0px;
 .blogText
 {
   margin: 0px 0px 0px 20px;
-
 }
-.blog-text-container {
+
+.blog-text-container
+{
   float: left;
   margin-bottom: 12px;
 }
 
 .blog-text-container p,
-.blog-text-container img {
+.blog-text-container img
+{
   float: left;
 }
 
-.list-container {
+.list-container
+{
   float: left;
 }
 
