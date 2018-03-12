@@ -12,7 +12,7 @@ header{
 
 body
 {
-  margin: 0px 0px 0px 0px;
+  /* margin: 0px 0px 0px 0px; */
 }
 h1
 {
@@ -22,6 +22,9 @@ h1
   font-size: 48px;
 }
 
+.Wrapper
+{
+}
 
 .top h2
 {
@@ -32,8 +35,7 @@ h1
   letter-spacing:2px;
   border: 1px solid #ffffff;
   width: 75px;
-  margin:auto;
-  /* margin-top: 20px; */
+  margin: auto;
   margin-bottom: 35px;
   padding: 4px;
 }
@@ -97,7 +99,7 @@ aside
   letter-spacing:2px;
   border: 1px solid #ffffff;
   width: 75px;
-  margin:0px 170px 0px 170px;
+  margin:0px 205px 0px 205px;
   padding: 3px;
 }
 
@@ -533,7 +535,7 @@ text-align: right;
 
 .whatWeDo
 {
-  margin: 360px 360px 0 439px;
+  margin: 360px 360px 0 420px;
   font-weight: 100;
   position:relative;
   width: 56%;
@@ -674,9 +676,23 @@ margin: 0px 10px 0px 0px;
 
 .blogText
 {
-  margin: 0px 0px 0px 50px;
+  margin: 0px 0px 0px 20px;
 
 }
+.blog-text-container {
+  float: left;
+  margin-bottom: 12px;
+}
+
+.blog-text-container p,
+.blog-text-container img {
+  float: left;
+}
+
+.list-container {
+  float: left;
+}
+
 #yellow-dash
 {
   margin-right: 4px;
