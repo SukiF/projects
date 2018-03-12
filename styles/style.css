@@ -293,7 +293,7 @@ overflow-y:hidden;
   margin: 125px auto 0px;
   font-weight: 100;
   position:relative;
-  width: 56%;
+  width: 62%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -307,7 +307,7 @@ overflow-y:hidden;
 }
 .story
 {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-size: 9px;
   font-weight: 100;
   line-height: 20px;
@@ -318,9 +318,9 @@ overflow-y:hidden;
 }
 .story1
 {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   color: #ffffff;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 100;
   line-height: 20px;
   margin-right: 30px;
@@ -345,7 +345,7 @@ height:auto;
 .column
 {
   box-sizing: border-box;
-  height:150px;
+  height:190px;
   width: 33%;
   background-color: none;
   position:relative;
@@ -410,7 +410,7 @@ height: auto;
 .test1
 {
 box-sizing: border-box;
-height: 250px;
+height: 280px;
 width: 25%;
 background-color: #ffffff;
 float: left;
@@ -421,7 +421,7 @@ margin: 8px;
 .test2
 {
 box-sizing: border-box;
-height: 250px;
+height: 280px;
 width: 25%;
 background-color: #694fca;
 float:left;
@@ -433,7 +433,7 @@ margin: 8px;
 .test3
 {
 box-sizing: border-box;
-height: 250px;
+height: 280px;
 width: 25%;
 background-color: #ffffff;
 float: left;
@@ -442,19 +442,21 @@ margin: 8px;
 
 .testText1
 {
-font-family:Georgia;
+font-family:"georgia";
 font-size: 10px;
 padding-right: 15px;
 padding-left: 15px;
+line-height: 16px;
 }
 
 .testText2
 {
 color:#ffffff;
-font-family:Georgia;
+font-family:"georgia";
 font-size: 10px;
 padding-right: 15px;
 padding-left: 15px;
+line-height: 16px;
 }
 
 .TestName1
@@ -571,11 +573,18 @@ z-index: 50;
   text-align: center;
 }
 
-.footer
+.footer-top
 {
   background-color:#212121;
   color:#ffffff;
-  height:250px;
+  height:55px;
+  border-bottom: 1px solid #4a4a4a;
+}
+.footer-bottom
+{
+  background-color:#212121;
+  color:#ffffff;
+  height:200px;
 }
 .footerNav
 {
