@@ -1,10 +1,4 @@
 
-
-header{
-}
-
-/* wanted to rearrange the order, but was afrtaid I would break the code */
-
 @font-face {
     font-family: 'AbrahamLincoln';
     src: url('fonts/abrahamlincoln-webfont.woff2') format('woff2'),
@@ -17,31 +11,6 @@ h1
   font-family: "AbrahamLincoln";
   font-weight: lighter;
   font-size: 48px;
-}
-
-.Wrapper
-{
-  width: 1090px;
-}
-/* added a wrapper to constrain the size */
-.top h2
-{
-  color:#ffffff;
-  font-size: 16px;
-  font-family: "Montserrat";
-  font-weight: bold;
-  letter-spacing:2px;
-  border: 1px solid #ffffff;
-  width: 75px;
-  margin: auto;
-  margin-bottom: 35px;
-  padding: 4px;
-}
-
-.top
-{
-  font-size: 50px;
-  margin-top: 0px;
 }
 
 h3
@@ -82,7 +51,33 @@ aside
   margin:0px;
   padding:0px;
 }
+
+.Wrapper
+{
+  width: 1090px;
+}
+/* added a wrapper to constrain the size */
+.top h2
+{
+  color:#ffffff;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  letter-spacing:2px;
+  border: 1px solid #ffffff;
+  width: 75px;
+  margin: auto;
+  margin-bottom: 35px;
+  padding: 4px;
+}
+
+.top
+{
+  font-size: 50px;
+  margin-top: 0px;
+}
  /*  next time I will break the color and font sizes out into their own class so I can reuse the code*/
+
 .textColorWht
 {
   color: #ffffff
@@ -155,6 +150,11 @@ display: inline;
 margin-right: 35px;
 }
 
+.UlNav li a
+{
+  color:#ffffff;
+  text-decoration:none;
+}
 .purpleInvite
 {
   text-align: left;
