@@ -1,8 +1,10 @@
 
 
 header{
-
 }
+
+/* wanted to rearrange the order, but was afrtaid I would break the code */
+
 @font-face {
     font-family: 'AbrahamLincoln';
     src: url('fonts/abrahamlincoln-webfont.woff2') format('woff2'),
@@ -21,7 +23,7 @@ h1
 {
   width: 1090px;
 }
-
+/* added a wrapper to constrain the size */
 .top h2
 {
   color:#ffffff;
@@ -80,7 +82,7 @@ aside
   margin:0px;
   padding:0px;
 }
-
+ /*  next time I will break the color and font sizes out into their own class so I can reuse the code*/
 .textColorWht
 {
   color: #ffffff
@@ -204,7 +206,7 @@ margin-right: 35px;
   word-spacing: 35px;
   letter-spacing: 2px;
 }
-
+/* whould like to know how to do this without using negative numbers */
 .scroll
 {
   text-align:center;
