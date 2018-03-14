@@ -52,13 +52,17 @@ aside
   padding:0px;
 }
 
+/* hr
+{
+  width:100%;
+  color: #4a4a4a;
+} */
 .Wrapper
 {
   width: 1090px;
 }
 /* added a wrapper to constrain the size */
-.top h2
-{
+.top h2 {
   color:#ffffff;
   font-size: 16px;
   font-family: "Montserrat";
