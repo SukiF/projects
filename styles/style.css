@@ -4,17 +4,17 @@
     src: url('fonts/abrahamlincoln-webfont.woff2') format('woff2'),
          url('fonts/abrahamlincoln-webfont.woff') format('woff');
 }
-
-h1
-{
+body{
+  margin: 0px 0px 0px 0px;
+}
+h1 {
   color:#ffa800;
   font-family: "AbrahamLincoln";
   font-weight: lighter;
   font-size: 48px;
 }
 
-h3
-{
+h3 {
   color:#ffffff;
   font-size: 45px;
   font-family: "AbrahamLincoln";
@@ -26,8 +26,7 @@ h3
   line-height: 40px;
 }
 
-h4
-{
+h4 {
   color:#ffa800;
   font-size: 15px;
   font-family: "AbrahamLincoln";
@@ -38,16 +37,14 @@ h4
   margin-bottom: 0px;
 }
 
-h5
-{
+h5 {
   color:#ffffff;
   font-family: "Roboto";
   font-weight: 100;
   font-size: 8px;
 }
 
-aside
-{
+aside {
   margin:0px;
   padding:0px;
 }
@@ -57,10 +54,10 @@ aside
   width:100%;
   color: #4a4a4a;
 } */
-.Wrapper
-{
+.Wrapper {
   width: 1090px;
 }
+
 /* added a wrapper to constrain the size */
 .top h2 {
   color:#ffffff;
@@ -70,30 +67,25 @@ aside
   letter-spacing:2px;
   border: 1px solid #ffffff;
   width: 75px;
-  margin: auto;
-  margin-bottom: 35px;
+  margin: 0px auto 35px auto;
   padding: 4px;
 }
 
-.top
-{
+.top {
   font-size: 50px;
   margin-top: 0px;
 }
  /*  next time I will break the color and font sizes out into their own class so I can reuse the code*/
 
-.textColorWht
-{
+.textColorWht {
   color: #ffffff
 }
 
-.textColorGray
-{
+.textColorGray {
   color: #8b8b8b;
 }
 
-.footerUnity
-{
+.footerUnity {
   color:#ffffff;
   font-size: 16px;
   font-family: "Montserrat";
@@ -105,24 +97,22 @@ aside
   padding: 3px;
 }
 
-.RobotoText
-{
+.RobotoText {
   font-size: 7px;
   font-family: "Roboto";
   line-height: 16px;
 }
 
-.RobotoText2
-{
+.RobotoText2 {
   color:#8b8b8b;
   font-size: 7px;
   font-family: "Roboto";
   margin-left: 10px;
 }
 
-.top-section
-{
-  background-image: url("../img/background1.png");
+.top-section {
+
+  background-image: url("../img/background2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -133,75 +123,64 @@ aside
   margin: 0px;
 }
 
-.top-nav
-{
+.top-nav {
   font-size: 10px;
   letter-spacing:2px;
   padding: 0px;
   font-family: "AbrahamLincoln";
 }
 
-.UlNav
-{
+.UlNav {
 list-style-type: none;
 margin:0px;
 padding:0px;
 }
 
-.UlNav li
-{
+.UlNav li {
 display: inline;
 margin-right: 35px;
 }
 
-.UlNav li a
-{
+.UlNav li a {
   color:#ffffff;
   text-decoration:none;
 }
-.purpleInvite
-{
+.purpleInvite {
   text-align: left;
   padding-top:40px;
   z-index: 0;
 }
 
-.frame1Text
-{
+.frame1Text {
   margin: 2px auto;
   width: 52%;
   z-index: 1;
 }
 
-.subText1
-{
+.subText1 {
   font-size: 15px;
   font-family: "AbrahamLincoln";
 }
 
-.subText2
-{
+.subText2 {
   font-size: 15px;
   font-family: "AbrahamLincoln";
-  margin:0px;
+  margin:0px 32px;
 }
 
-.honor1
-{
+.honor1 {
   margin-top:140px;
   margin-bottom: 0px;
   padding-top: 0px;
 }
 
-.phone
-{
+.phone {
   position:absolute;
   right:30px;
   top:0px;
 }
 
-.side-nav
-{
+.side-nav {
   font-size: 7px;
   transform: rotate(-90deg);
   position:absolute;
@@ -209,32 +188,30 @@ margin-right: 35px;
   right:-82px;
   word-spacing: 35px;
   letter-spacing: 2px;
+  list-style-type: none;
+  text-decoration:none;
 }
-/* whould like to know how to do this without using negative numbers */
-.scroll
-{
+
+.scroll {
   text-align:center;
   margin-top: 115px;
   font-size: 13px;
   letter-spacing: 2px;
 }
 
-.whtRect
-{
+.whtRect {
   width: 32px;
   height: 32px;
   align-content: center;
 }
 
-.dwnArrow
-{
+.dwnArrow {
 width: 11px;
 height: 11px;
 margin-top: 27px;
 }
 
-.section2
-{
+.section2 {
 background-color:#694fca;
 color:#ffffff;
 height:670px;
@@ -242,8 +219,7 @@ overflow: auto;
 overflow-y:hidden;
 }
 
-.we-bring
-{
+.we-bring {
   font-family: "AbrahamLincoln";
   font-weight: lighter;
   font-size: 20px;
@@ -251,53 +227,44 @@ overflow-y:hidden;
   margin-top: 10px;
 }
 
-.frame1
-{
+.frame1 {
   height: auto;
-  width:54%;
-  margin: 90px auto;
-  z-index: 25;
+  width: 50%;
+  margin: 100px auto;
+  z-index: 5;
 }
 
-.frame1size
-{
+.frame1size {
     height:415px;
 }
 
-.frame2
-{
+.frame2 {
   height: auto;
   width:54%;
-  margin: 30px auto;
-  margin-top: 150px;
+  margin: 150px auto;
 }
 
-.frame2size
-{
+.frame2size {
   height:430px;
 }
 
-.honor2
-{
+.honor2 {
   color:#000000;
   line-height: 44px;
-  margin:30px 0px 0px;
+  margin:34px 30px 0px;
 
 }
-.frame3
-{
+.frame3 {
   height: auto;
   margin-top: 130px;
   z-index: 1;
 }
 
-.frame3size
-{
+.frame3size {
   height:390px;
 }
 
-.Complexity
-{
+.Complexity {
   margin: 125px auto 0px;
   font-weight: 100;
   position:relative;
@@ -308,13 +275,11 @@ overflow-y:hidden;
   align-items: center;
 }
 
-.Complexity h3
-{
+.Complexity h3 {
   display:inline-block;
 }
 
-.story
-{
+.story {
   font-family: "Poppins";
   font-size: 9px;
   font-weight: 100;
@@ -323,8 +288,7 @@ overflow-y:hidden;
   position: relative;
 }
 
-.story1
-{
+.story1 {
   font-family: "Poppins";
   color: #ffffff;
   font-size: 8px;
@@ -334,8 +298,7 @@ overflow-y:hidden;
   position:relative;
 }
 
-.story2
-{
+.story2 {
   font-family: "Poppins";
   color: #000000;
   font-size: 12px;
@@ -344,15 +307,13 @@ overflow-y:hidden;
   margin: 12px 0px 16px 0px;
 }
 
-.ColumnWrapper
-{
+.ColumnWrapper {
 width: 56%;
 margin:10px auto;
 height:auto;
 }
 
-.column
-{
+.column {
   box-sizing: border-box;
   height:190px;
   width: 33%;
@@ -362,8 +323,7 @@ height:auto;
   display:inline-block;
 }
 
-.dashedLines
-{
+.dashedLines {
   box-sizing: border-box;
   width: 5%;
   background-color: none;
@@ -371,55 +331,47 @@ height:auto;
   border: 10px:
 }
 
-.love
-{
+.love {
   color:#000000;
   margin: 0px;
   width: 300px;
   padding-top: 115px;
 }
 
-.global
-{
+.global {
   padding-top: 688px;
   margin:0px;
   color:#000000;
 }
 
-.vertLine3
-{
+.vertLine3 {
   margin:20px 0px 20px 0px;
 }
 
-.headshot
-{
+.headshot {
 padding:23px;
 width: 40%;
 height: auto;
 }
 
-.stars
-{
+.stars {
  width:35%;
  height:auto;
  margin: 0px 50px;
 }
 
-.roundButton
-{
+.roundButton {
   width: 140px;
   margin-top: 28px;
 }
 
-.testimonials
-{
+.testimonials {
  margin: 0px 24px 0px auto;
  width:80%;
  text-align: center;
 }
 
-.test1
-{
+.testimonial1 {
 box-sizing: border-box;
 height: 280px;
 width: 25%;
@@ -428,8 +380,7 @@ float: left;
 margin: 8px;
 }
 
-.test2
-{
+.testimonial2 {
 box-sizing: border-box;
 height: 280px;
 width: 25%;
@@ -439,18 +390,7 @@ box-shadow: 0px 10px 20px #797d7f;
 margin: 8px;
 }
 
-.test3
-{
-box-sizing: border-box;
-height: 280px;
-width: 25%;
-background-color: #ffffff;
-float: left;
-margin: 8px;
-}
-
-.testText1
-{
+.testimonialText1 {
 font-family:"georgia";
 font-size: 10px;
 padding-right: 15px;
@@ -458,8 +398,7 @@ padding-left: 15px;
 line-height: 16px;
 }
 
-.testText2
-{
+.testimonialText2 {
 color:#ffffff;
 font-family:"georgia";
 font-size: 10px;
@@ -468,8 +407,7 @@ padding-left: 15px;
 line-height: 16px;
 }
 
-.TestName1
-{
+.testimonialName1 {
   color:#000000;
   font-family:"Roboto";
   font-weight:bold;
@@ -479,8 +417,7 @@ line-height: 16px;
   margin:0px;
 }
 
-.TestCity1
-{
+.testimonialCity1 {
   color:#c6c6c6;
   font-family:"Roboto";
   font-weight:100;
@@ -489,8 +426,7 @@ line-height: 16px;
   margin: 3px;
 }
 
-.TestName2
-{
+.testimonialName2 {
   color:#ffa800;
   font-family:"Roboto";
   font-weight:bold;
@@ -500,8 +436,7 @@ line-height: 16px;
   margin:0px;
 }
 
-.TestCity2
-{
+.testimonialCity2 {
   color:#ffa800;
   font-family:sans-serif;
   font-weight:100;
@@ -510,8 +445,7 @@ line-height: 16px;
   margin:3px;
 }
 
-.section3
-{
+.section3 {
   background-image: url("../img/WeAreUnitylg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -521,15 +455,13 @@ line-height: 16px;
   height: 738px;
 }
 
-.section4
-{
+.section4 {
   width:100%;
   padding:5px 0px;
   height:400px;
 }
 
-.section4Title
-{
+.section4Title {
 background-color:#ffffff;
 color:#000000;
 height: 100px;
@@ -538,22 +470,19 @@ margin:0px 450px 0 auto;
 text-align: right;
 }
 
-.h1sm
-{
+.h1sm {
   font-size: 36px;
   margin:0px;
 }
 
-.whatWeDo
-{
+.whatWeDo {
   margin: 360px 360px 0 420px;
   font-weight: 100;
   position:relative;
   width: 56%;
 }
 
-.iconColumns
-{
+.iconColumns {
 font-size: 14px;
 font-family: "AbrahamLincoln";
 margin: -143px 0px 0px 769px;
@@ -561,19 +490,16 @@ line-height: 56px;
 z-index: 50;
 }
 
-.leftColumn
-{
+.leftColumn {
   float:left;
 }
 
-.rightColumn
-{
+.rightColumn {
   float:left;
   margin-left: 60px;
 }
 
-.section5
-{
+.section5 {
   background-image: url("../img/SnowScene.png");
   background-size: 1200px;
   background-position: center;
@@ -584,34 +510,29 @@ z-index: 50;
   text-align: center;
 }
 
-.footer-top
-{
+.footer-top {
   background-color:#212121;
   color:#ffffff;
   height:55px;
   border-bottom: 1px solid #4a4a4a;
 }
 
-.footer-bottom
-{
+.footer-bottom {
   background-color:#212121;
   color:#ffffff;
   height:200px;
 }
 
-.footerNav
-{
+.footerNav {
   display:inline-block;
   margin: 20px 0px 40px 170px;
 }
 
-.footerImg
-{
+.footerImg {
   margin: 2px 4px 0px 0px;
 }
 
-.email
-{
+.email {
 color:#694fca;
 text-decoration: none;
 font-family: "Roboto";
@@ -621,8 +542,7 @@ float:right;
 margin: 3px 0px -4px 4px;
 }
 
-.emailText
-{
+.emailText {
   border: .01em solid;
   width: 150px;
   margin-top: 7px;
@@ -631,8 +551,7 @@ margin: 3px 0px -4px 4px;
   float: left;
 }
 
-.button
-{
+.button {
   border: 0px  solid;
   width: 65px;
   background-color: #694fca;
@@ -644,94 +563,79 @@ margin: 3px 0px -4px 4px;
   float:left;
 }
 
-.purpleDate
-{
+.purpleDate {
   font-family:"Roboto";
   font-size:7px;
   letter-spacing: 2px;
   color:#694fca;
 }
 
-.AboutUs
-{
+.AboutUs {
   float:left;
   margin: 0px 0px 0px 170px;
   width:32%;
 }
 
-.compLady
-{
+.compLady {
 height:66px;
 width:auto;
 float:left;
 margin: 0px 10px 0px 0px;
 }
 
-.socialMedia
-{
+.socialMedia {
   margin-top:10px;
 }
 
-.newsLetter
-{
+.newsLetter {
   float:left;
   margin: 0px 0px 0px 0px;
   width: 20%;
 }
 
-.fromBlog
-{
+.fromBlog {
   float:left;
   margin: 0px 0px 0px 0px;
   width:22%;
 }
 
-.blog
-{
+.blog {
   float:left;
 }
 
-.emailPosition
-{
+.emailPosition {
   float:right;
 }
 
-.blogImg
-{
+.blogImg {
   height:30px;
   width:30px;
 }
 
-.blogText
-{
+.blogText {
   margin: 0px 0px 0px 20px;
 }
 
-.blog-text-container
-{
+.blog-text-container {
   float: left;
   margin-bottom: 12px;
 }
 
 .blog-text-container p,
-.blog-text-container img
-{
+.blog-text-container img {
   float: left;
 }
 
-.list-container
-{
+.list-container {
   float: left;
 }
 
-#yellow-dash
-{
+.yellow-dash {
   margin-right: 4px;
   width: 17px;
 }
 
-#two-dash
-{
+.two-dash {
   margin-left: 4px;
   width: 17px;
 }
