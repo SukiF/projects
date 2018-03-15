@@ -5,16 +5,14 @@
          url('fonts/abrahamlincoln-webfont.woff') format('woff');
 }
 
-h1
-{
+h1 {
   color:#ffa800;
   font-family: "AbrahamLincoln";
   font-weight: lighter;
   font-size: 48px;
 }
 
-h3
-{
+h3 {
   color:#ffffff;
   font-size: 45px;
   font-family: "AbrahamLincoln";
@@ -26,8 +24,7 @@ h3
   line-height: 40px;
 }
 
-h4
-{
+h4 {
   color:#ffa800;
   font-size: 15px;
   font-family: "AbrahamLincoln";
@@ -38,27 +35,25 @@ h4
   margin-bottom: 0px;
 }
 
-h5
-{
+h5 {
   color:#ffffff;
   font-family: "Roboto";
   font-weight: 100;
   font-size: 8px;
 }
 
-aside
-{
+aside {
   margin:0px;
   padding:0px;
 }
 
-/* hr
-{
-  width:100%;
-  color: #4a4a4a;
-} */
-.Wrapper
-{
+hr{
+  display: block;
+  color: #ffffff;
+  height:1px solid;
+}
+
+.wrapper {
   width: 1090px;
 }
 /* added a wrapper to constrain the size */
@@ -75,25 +70,21 @@ aside
   padding: 4px;
 }
 
-.top
-{
+.top {
   font-size: 50px;
   margin-top: 0px;
 }
  /*  next time I will break the color and font sizes out into their own class so I can reuse the code*/
 
-.textColorWht
-{
+.text-color-wht {
   color: #ffffff
 }
 
-.textColorGray
-{
+.text-color-gray {
   color: #8b8b8b;
 }
 
-.footerUnity
-{
+.footer-unity {
   color:#ffffff;
   font-size: 16px;
   font-family: "Montserrat";
@@ -105,23 +96,20 @@ aside
   padding: 3px;
 }
 
-.RobotoText
-{
+.Roboto-text {
   font-size: 7px;
   font-family: "Roboto";
   line-height: 16px;
 }
 
-.RobotoText2
-{
+.Roboto-text-2 {
   color:#8b8b8b;
   font-size: 7px;
   font-family: "Roboto";
   margin-left: 10px;
 }
 
-.top-section
-{
+.top-section {
   background-image: url("../img/background1.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,75 +121,65 @@ aside
   margin: 0px;
 }
 
-.top-nav
-{
+.top-nav {
   font-size: 10px;
   letter-spacing:2px;
   padding: 0px;
   font-family: "AbrahamLincoln";
 }
 
-.UlNav
-{
+li {
 list-style-type: none;
 margin:0px;
 padding:0px;
 }
 
-.UlNav li
-{
+.ul-nav li {
 display: inline;
 margin-right: 35px;
 }
 
-.UlNav li a
-{
+.ul-nav li a {
   color:#ffffff;
   text-decoration:none;
 }
-.purpleInvite
-{
+
+.purple-invite {
   text-align: left;
   padding-top:40px;
   z-index: 0;
 }
 
-.frame1Text
-{
+.frame-1-text {
   margin: 2px auto;
   width: 52%;
   z-index: 1;
 }
 
-.subText1
-{
+.sub-text-1 {
   font-size: 15px;
   font-family: "AbrahamLincoln";
 }
 
-.subText2
-{
+.sub-text-2 {
   font-size: 15px;
   font-family: "AbrahamLincoln";
   margin:0px;
 }
 
-.honor1
-{
+.honor-1 {
   margin-top:140px;
   margin-bottom: 0px;
   padding-top: 0px;
 }
 
-.phone
-{
+.phone {
   position:absolute;
   right:30px;
   top:0px;
 }
 
-.side-nav
-{
+.side-nav {
   font-size: 7px;
   transform: rotate(-90deg);
   position:absolute;
@@ -210,31 +188,27 @@ margin-right: 35px;
   word-spacing: 35px;
   letter-spacing: 2px;
 }
-/* whould like to know how to do this without using negative numbers */
-.scroll
-{
+
+.scroll {
   text-align:center;
   margin-top: 115px;
   font-size: 13px;
   letter-spacing: 2px;
 }
 
-.whtRect
-{
+.wht-rect {
   width: 32px;
   height: 32px;
   align-content: center;
 }
 
-.dwnArrow
-{
+.dwn-arrow {
 width: 11px;
 height: 11px;
 margin-top: 27px;
 }
 
-.section2
-{
+.section-2 {
 background-color:#694fca;
 color:#ffffff;
 height:670px;
@@ -242,8 +216,7 @@ overflow: auto;
 overflow-y:hidden;
 }
 
-.we-bring
-{
+.we-bring {
   font-family: "AbrahamLincoln";
   font-weight: lighter;
   font-size: 20px;
@@ -251,53 +224,45 @@ overflow-y:hidden;
   margin-top: 10px;
 }
 
-.frame1
-{
+.frame-1 {
   height: auto;
   width:54%;
   margin: 90px auto;
   z-index: 25;
 }
 
-.frame1size
-{
-    height:415px;
+.frame-1-size {
+  height:415px;
 }
 
-.frame2
-{
+.frame-2 {
   height: auto;
   width:54%;
   margin: 30px auto;
   margin-top: 150px;
 }
 
-.frame2size
-{
+.frame-2-size {
   height:430px;
 }
 
-.honor2
-{
+.honor-2 {
   color:#000000;
   line-height: 44px;
   margin:30px 0px 0px;
-
 }
-.frame3
-{
+
+.frame-3 {
   height: auto;
   margin-top: 130px;
   z-index: 1;
 }
 
-.frame3size
-{
+.frame-3-size {
   height:390px;
 }
 
-.Complexity
-{
+.complexity {
   margin: 125px auto 0px;
   font-weight: 100;
   position:relative;
@@ -308,13 +273,11 @@ overflow-y:hidden;
   align-items: center;
 }
 
-.Complexity h3
-{
+.complexity h3 {
   display:inline-block;
 }
 
-.story
-{
+.story {
   font-family: "Poppins";
   font-size: 9px;
   font-weight: 100;
@@ -323,8 +286,7 @@ overflow-y:hidden;
   position: relative;
 }
 
-.story1
-{
+.story-1 {
   font-family: "Poppins";
   color: #ffffff;
   font-size: 8px;
@@ -334,8 +296,7 @@ overflow-y:hidden;
   position:relative;
 }
 
-.story2
-{
+.story-2 {
   font-family: "Poppins";
   color: #000000;
   font-size: 12px;
@@ -344,15 +305,13 @@ overflow-y:hidden;
   margin: 12px 0px 16px 0px;
 }
 
-.ColumnWrapper
-{
+.column-wrapper {
 width: 56%;
 margin:10px auto;
 height:auto;
 }
 
-.column
-{
+.column {
   box-sizing: border-box;
   height:190px;
   width: 33%;
@@ -362,8 +321,7 @@ height:auto;
   display:inline-block;
 }
 
-.dashedLines
-{
+.dashed-lines {
   box-sizing: border-box;
   width: 5%;
   background-color: none;
@@ -371,55 +329,47 @@ height:auto;
   border: 10px:
 }
 
-.love
-{
+.love {
   color:#000000;
   margin: 0px;
   width: 300px;
   padding-top: 115px;
 }
 
-.global
-{
+.global {
   padding-top: 688px;
   margin:0px;
   color:#000000;
 }
 
-.vertLine3
-{
+.vert-line-3 {
   margin:20px 0px 20px 0px;
 }
 
-.headshot
-{
+.headshot {
 padding:23px;
 width: 40%;
 height: auto;
 }
 
-.stars
-{
+.stars {
  width:35%;
  height:auto;
  margin: 0px 50px;
 }
 
-.roundButton
-{
+.round-button {
   width: 140px;
   margin-top: 28px;
 }
 
-.testimonials
-{
+.testimonials {
  margin: 0px 24px 0px auto;
  width:80%;
  text-align: center;
 }
 
-.test1
-{
+.testimonial-1 {
 box-sizing: border-box;
 height: 280px;
 width: 25%;
@@ -428,8 +378,7 @@ float: left;
 margin: 8px;
 }
 
-.test2
-{
+.testimonial-2 {
 box-sizing: border-box;
 height: 280px;
 width: 25%;
@@ -439,8 +388,7 @@ box-shadow: 0px 10px 20px #797d7f;
 margin: 8px;
 }
 
-.test3
-{
+.testimonial-3 {
 box-sizing: border-box;
 height: 280px;
 width: 25%;
@@ -449,8 +397,7 @@ float: left;
 margin: 8px;
 }
 
-.testText1
-{
+.testimonial-text-1 {
 font-family:"georgia";
 font-size: 10px;
 padding-right: 15px;
@@ -458,8 +405,7 @@ padding-left: 15px;
 line-height: 16px;
 }
 
-.testText2
-{
+.testimonial-text-2 {
 color:#ffffff;
 font-family:"georgia";
 font-size: 10px;
@@ -468,8 +414,7 @@ padding-left: 15px;
 line-height: 16px;
 }
 
-.TestName1
-{
+.testimonial-name-1 {
   color:#000000;
   font-family:"Roboto";
   font-weight:bold;
@@ -479,8 +424,7 @@ line-height: 16px;
   margin:0px;
 }
 
-.TestCity1
-{
+.testimonial-city-1 {
   color:#c6c6c6;
   font-family:"Roboto";
   font-weight:100;
@@ -489,8 +433,7 @@ line-height: 16px;
   margin: 3px;
 }
 
-.TestName2
-{
+.testimonial-name-2 {
   color:#ffa800;
   font-family:"Roboto";
   font-weight:bold;
@@ -500,8 +443,7 @@ line-height: 16px;
   margin:0px;
 }
 
-.TestCity2
-{
+.testimonial-city-2 {
   color:#ffa800;
   font-family:sans-serif;
   font-weight:100;
@@ -510,8 +452,7 @@ line-height: 16px;
   margin:3px;
 }
 
-.section3
-{
+.section-3 {
   background-image: url("../img/WeAreUnitylg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -521,15 +462,13 @@ line-height: 16px;
   height: 738px;
 }
 
-.section4
-{
+.section-4 {
   width:100%;
   padding:5px 0px;
   height:400px;
 }
 
-.section4Title
-{
+.section-4-title {
 background-color:#ffffff;
 color:#000000;
 height: 100px;
@@ -538,22 +477,19 @@ margin:0px 450px 0 auto;
 text-align: right;
 }
 
-.h1sm
-{
+.h1sm {
   font-size: 36px;
   margin:0px;
 }
 
-.whatWeDo
-{
+.what-we-do {
   margin: 360px 360px 0 420px;
   font-weight: 100;
   position:relative;
   width: 56%;
 }
 
-.iconColumns
-{
+.icon-columns {
 font-size: 14px;
 font-family: "AbrahamLincoln";
 margin: -143px 0px 0px 769px;
@@ -561,19 +497,16 @@ line-height: 56px;
 z-index: 50;
 }
 
-.leftColumn
-{
+.left-column {
   float:left;
 }
 
-.rightColumn
-{
+.right-column {
   float:left;
   margin-left: 60px;
 }
 
-.section5
-{
+.section-5 {
   background-image: url("../img/SnowScene.png");
   background-size: 1200px;
   background-position: center;
@@ -584,34 +517,29 @@ z-index: 50;
   text-align: center;
 }
 
-.footer-top
-{
+.footer-top {
   background-color:#212121;
   color:#ffffff;
   height:55px;
   border-bottom: 1px solid #4a4a4a;
 }
 
-.footer-bottom
-{
+.footer-bottom {
   background-color:#212121;
   color:#ffffff;
   height:200px;
 }
 
-.footerNav
-{
+.footer-nav {
   display:inline-block;
   margin: 20px 0px 40px 170px;
 }
 
-.footerImg
-{
+.footer-img {
   margin: 2px 4px 0px 0px;
 }
 
-.email
-{
+.email {
 color:#694fca;
 text-decoration: none;
 font-family: "Roboto";
@@ -621,8 +549,7 @@ float:right;
 margin: 3px 0px -4px 4px;
 }
 
-.emailText
-{
+.email-text {
   border: .01em solid;
   width: 150px;
   margin-top: 7px;
@@ -631,8 +558,7 @@ margin: 3px 0px -4px 4px;
   float: left;
 }
 
-.button
-{
+.button {
   border: 0px  solid;
   width: 65px;
   background-color: #694fca;
@@ -644,94 +570,79 @@ margin: 3px 0px -4px 4px;
   float:left;
 }
 
-.purpleDate
-{
+.purple-date {
   font-family:"Roboto";
   font-size:7px;
   letter-spacing: 2px;
   color:#694fca;
 }
 
-.AboutUs
-{
+.about-us {
   float:left;
   margin: 0px 0px 0px 170px;
   width:32%;
 }
 
-.compLady
-{
+.comp-lady {
 height:66px;
 width:auto;
 float:left;
 margin: 0px 10px 0px 0px;
 }
 
-.socialMedia
-{
+.social-media {
   margin-top:10px;
 }
 
-.newsLetter
-{
+.newsletter {
   float:left;
   margin: 0px 0px 0px 0px;
   width: 20%;
 }
 
-.fromBlog
-{
+.from-blog {
   float:left;
   margin: 0px 0px 0px 0px;
   width:22%;
 }
 
-.blog
-{
+.blog {
   float:left;
 }
 
-.emailPosition
-{
+.email-position {
   float:right;
 }
 
-.blogImg
-{
+.blog-img {
   height:30px;
   width:30px;
 }
 
-.blogText
-{
+.blog-text {
   margin: 0px 0px 0px 20px;
 }
 
-.blog-text-container
-{
+.blog-text-container {
   float: left;
   margin-bottom: 12px;
 }
 
 .blog-text-container p,
-.blog-text-container img
-{
+.blog-text-container img {
   float: left;
 }
 
-.list-container
-{
+.list-container {
   float: left;
 }
 
-#yellow-dash
-{
+.yellow-dash {
   margin-right: 4px;
   width: 17px;
 }
 
-#two-dash
-{
+.two-dash {
   margin-left: 4px;
   width: 17px;
 }
