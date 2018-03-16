@@ -47,14 +47,9 @@ aside {
   padding:0px;
 }
 
-hr{
-  display: block;
-  color: #ffffff;
-  height:1px solid;
-}
 
 .wrapper {
-  width: 1090px;
+  width: 1163px;
 }
 /* added a wrapper to constrain the size */
 .top h2 {
@@ -73,6 +68,7 @@ hr{
 .top {
   font-size: 50px;
   margin-top: 0px;
+  padding-top:20px;
 }
  /*  next time I will break the color and font sizes out into their own class so I can reuse the code*/
 
@@ -174,9 +170,10 @@ margin-right: 35px;
 }
 
 .phone {
-  position:absolute;
-  right:30px;
-  top:0px;
+  position:relative;
+  right:31px;
+  float:right;
+  top:-110px;
 }
 
 .side-nav {
@@ -184,7 +181,7 @@ margin-right: 35px;
   transform: rotate(-90deg);
   position:absolute;
   top: 315px;
-  right:-82px;
+  right:-35px;
   word-spacing: 35px;
   letter-spacing: 2px;
 }
@@ -211,7 +208,7 @@ margin-top: 27px;
 .section-2 {
 background-color:#694fca;
 color:#ffffff;
-height:670px;
+height:650px;
 overflow: auto;
 overflow-y:hidden;
 }
@@ -226,7 +223,7 @@ overflow-y:hidden;
 
 .frame-1 {
   height: auto;
-  width:54%;
+  width:50s%;
   margin: 90px auto;
   z-index: 25;
 }
@@ -237,7 +234,7 @@ overflow-y:hidden;
 
 .frame-2 {
   height: auto;
-  width:54%;
+  width:52%;
   margin: 30px auto;
   margin-top: 150px;
 }
@@ -266,7 +263,7 @@ overflow-y:hidden;
   margin: 125px auto 0px;
   font-weight: 100;
   position:relative;
-  width: 62%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -277,26 +274,24 @@ overflow-y:hidden;
   display:inline-block;
 }
 
-.story {
+.complexity-text {
   font-family: "Poppins";
   font-size: 9px;
   font-weight: 100;
   line-height: 20px;
-  margin-left:30px;
+  /* margin-left:30px; */
   position: relative;
 }
 
-.story-1 {
-  font-family: "Poppins";
+.complexity-sub-text {
   color: #ffffff;
   font-size: 8px;
-  font-weight: 100;
-  line-height: 20px;
-  margin-right: 30px;
-  position:relative;
+  margin-left: 0px;
+  margin-right:25px;
+
 }
 
-.story-2 {
+.unity-sub-text {
   font-family: "Poppins";
   color: #000000;
   font-size: 12px;
@@ -305,6 +300,10 @@ overflow-y:hidden;
   margin: 12px 0px 16px 0px;
 }
 
+.bloc{
+  margin: 0px 0px 0px 37px;
+  color: #ffffff;
+}
 .column-wrapper {
 width: 56%;
 margin:10px auto;
@@ -479,7 +478,7 @@ text-align: right;
 
 .h1sm {
   font-size: 36px;
-  margin:0px;
+  margin:0px 0px 0px 37px;
 }
 
 .what-we-do {
@@ -499,11 +498,14 @@ z-index: 50;
 
 .left-column {
   float:left;
+  margin-left:20px;
+  margin-top:15px;
 }
 
 .right-column {
   float:left;
   margin-left: 60px;
+  margin-top:15px;
 }
 
 .section-5 {
@@ -620,7 +622,7 @@ margin: 0px 10px 0px 0px;
 }
 
 .blog-text {
-  margin: 0px 0px 0px 20px;
+  margin: 5px 0px 0px 30px;
 }
 
 .blog-text-container {
