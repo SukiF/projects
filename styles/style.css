@@ -170,20 +170,28 @@ margin-right: 35px;
 }
 
 .phone {
-  position:relative;
+  /* position:relative; */
   right:31px;
   float:right;
-  top:-110px;
+  top:-170px;
+  margin:-172px 33px 0px 0px;
 }
 
 .side-nav {
   font-size: 7px;
   transform: rotate(-90deg);
-  position:absolute;
-  top: 315px;
-  right:-35px;
-  word-spacing: 35px;
+  word-spacing: 15px;
   letter-spacing: 2px;
+  /* margin: 100px 0px 0px 1072px; */
+  float:right;
+}
+.social{
+  margin-top: 216px;
+margin-right: 71px;
+}
+.side-nav>ul>li{
+  display:inline-block;
+
 }
 
 .scroll {
@@ -216,14 +224,14 @@ overflow-y:hidden;
 .we-bring {
   font-family: "AbrahamLincoln";
   font-weight: lighter;
-  font-size: 20px;
+  /* font-size: 20px; */
   letter-spacing:4px;
   margin-top: 10px;
 }
 
 .frame-1 {
   height: auto;
-  width:50s%;
+  width:50%;
   margin: 90px auto;
   z-index: 25;
 }
@@ -234,7 +242,7 @@ overflow-y:hidden;
 
 .frame-2 {
   height: auto;
-  width:52%;
+  width:47%;
   margin: 30px auto;
   margin-top: 150px;
 }
@@ -242,7 +250,9 @@ overflow-y:hidden;
 .frame-2-size {
   height:430px;
 }
-
+.honor-wrapper{
+  padding-left: 300px;
+}
 .honor-2 {
   color:#000000;
   line-height: 44px;
