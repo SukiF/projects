@@ -65,13 +65,6 @@ aside {
   padding: 4px;
 }
 
-.top {
-  font-size: 50px;
-  margin-top: 0px;
-  padding-top:20px;
-}
- /*  next time I will break the color and font sizes out into their own class so I can reuse the code*/
-
 .text-color-wht {
   color: #ffffff
 }
@@ -112,9 +105,8 @@ aside {
   background-position: center;
   color: #ffffff;
   font-family: "AbrahamLincoln";
-  height: 800px;
   text-align: center;
-  margin: 0px;
+  padding: 15px;
 }
 
 .top-nav {
@@ -173,8 +165,6 @@ margin-right: 35px;
   /* position:relative; */
   right:31px;
   float:right;
-  top:-170px;
-  margin:-172px 33px 0px 0px;
 }
 
 .side-nav {
@@ -187,7 +177,6 @@ margin-right: 35px;
 }
 .social{
   margin-top: 216px;
-margin-right: 71px;
 }
 .side-nav>ul>li{
   display:inline-block;
@@ -227,13 +216,6 @@ overflow-y:hidden;
   /* font-size: 20px; */
   letter-spacing:4px;
   margin-top: 10px;
-}
-
-.frame-1 {
-  height: auto;
-  width:50%;
-  margin: 90px auto;
-  z-index: 25;
 }
 
 .frame-1-size {
@@ -313,21 +295,6 @@ overflow-y:hidden;
 .bloc{
   margin: 0px 0px 0px 37px;
   color: #ffffff;
-}
-.column-wrapper {
-width: 56%;
-margin:10px auto;
-height:auto;
-}
-
-.column {
-  box-sizing: border-box;
-  height:190px;
-  width: 33%;
-  background-color: none;
-  position:relative;
-  float: left;
-  display:inline-block;
 }
 
 .dashed-lines {
