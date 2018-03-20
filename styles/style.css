@@ -48,8 +48,10 @@ aside {
 }
 
 
-.wrapper {
-  width: 1163px;
+.column-wrapper {
+  margin-left: 20%;
+  margin-right: 20%;
+  
 }
 /* added a wrapper to constrain the size */
 .top h2 {
@@ -175,9 +177,7 @@ margin-right: 35px;
   /* margin: 100px 0px 0px 1072px; */
   float:right;
 }
-.social{
-  margin-top: 216px;
-}
+
 .side-nav>ul>li{
   display:inline-block;
 
@@ -220,6 +220,7 @@ overflow-y:hidden;
 
 .frame-1-size {
   height:415px;
+  margin-bottom: -260px;
 }
 
 .frame-2 {
@@ -260,6 +261,10 @@ overflow-y:hidden;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.complex-label {
+  text-align: right;
 }
 
 .complexity h3 {
