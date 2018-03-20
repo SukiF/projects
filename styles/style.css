@@ -47,11 +47,6 @@ aside {
   padding:0px;
 }
 
-
-.wrapper {
-  width: 1163px;
-}
-/* added a wrapper to constrain the size */
 .top h2 {
   color:#ffffff;
   font-size: 16px;
@@ -70,7 +65,6 @@ aside {
   margin-top: 0px;
   padding-top:20px;
 }
- /*  next time I will break the color and font sizes out into their own class so I can reuse the code*/
 
 .text-color-wht {
   color: #ffffff
@@ -163,11 +157,11 @@ margin-right: 35px;
   margin:0px;
 }
 
-.honor-1 {
+/* .honor-1 {
   margin-top:140px;
   margin-bottom: 0px;
   padding-top: 0px;
-}
+} */
 
 .phone {
   /* position:relative; */
