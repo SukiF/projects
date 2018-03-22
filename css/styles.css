@@ -1,0 +1,44 @@
+.container-fluid{
+  padding: 0px ;
+}
+
+.above-nav{
+  font-family:"open sans";
+  font-size:.7em;
+  color: #939393;
+}
+.navbar{
+ background-color: #000000;
+}
+
+.background-wht{
+  background-color: #ffffff;
+}
+
+.background-blk{
+  background-color: #000000;
+}
+.text-gray{
+  color: #939393;
+}
+.text-wht{
+  color: #ffffff;
+}
+
+.nav-border{
+  border: .05em;
+  border-color: #93939393;
+  border-style:  solid;
+  margin: 3px 3px 3px 3px;
+  padding: 4px 4px 4px 4px;
+}
+.social-media-icons{
+}
+
+.carousel-indicators{
+  width:30px;
+}
+.form{
+  background-color: #ffffff;
+  color:#000000;
+}
