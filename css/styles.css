@@ -1,10 +1,12 @@
-
-.above-nav{
-  font-family:"open sans";
-  font-size:.7em;
-  color: #939393;
+hr {
+  display: block;
+  border-width: .05em;
+  color: #ffffff;
+  margin:0;
 }
-
+body{
+  font-family:"open sans"
+}
 a:link {
     color: #939393;
     background-color: transparent;
@@ -25,10 +27,31 @@ a:active {
     background-color: transparent;
     text-decoration: none;
 }
+
+.above-nav{
+  font-family:"open sans";
+  font-size:.7em;
+  color: #939393;
+  padding: 0rem 0rem 0rem 2rem;
+}
+
+.navbar{
+  padding: 1.5rem 1rem 0rem 1rem;
+}
+
+.nav-item{
+padding: 0rem 2rem 0rem 1rem;
+}
+
+.nav-item.active{
+  text-decoration: underline;
+  padding-bottom: 3px;
+
 }
 .background-wht{
   background-color: #ffffff;
 }
+
 .link-color{
   text-decoration: none;
 }
@@ -36,12 +59,15 @@ a:active {
 .text-gray{
   color: #939393;
 }
+
 .text-lt-gray{
   color: #acacac;
 }
+
 .text-wht{
   color: #ffffff;
 }
+
 .text-gold{
   color: #b7a174;
 }
@@ -49,13 +75,28 @@ a:active {
 .carousel-indicators{
   width:30px;
 }
+.widgets{
+  margin: 4px 0px;
+}
+.card{
+  border:6px solid #000000;
+}
 .form{
   background-color: #ffffff;
   color:#000000;
 }
+.tool-bar{
+  margin: 50px 0px 25px 0px;
+}
+
 .footer{
   padding: 30px 20px 30px 20px;
 }
-.bg-gray{
+
+.bg-gray-bottom{
   background-color: #3f3f3f;
+}
+
+.bg-gray-top{
+  background-color:#363636;
 }
