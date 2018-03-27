@@ -1,46 +1,54 @@
 hr {
-  display: block;
-  border-width: .05em;
-  color: #ffffff;
-  margin:0;
+  border-width: 1px;
+  color: #acacac;
+  width: 80%;
+
 }
+
 body{
   font-family:"open sans"
 }
+
 a:link {
     color: #939393;
     background-color: transparent;
     text-decoration: none;
 }
+
 a:visited {
     color: #939393;
     background-color: transparent;
     text-decoration: none;
 }
+
 a:hover {
     color: gray;
     background-color: transparent;
     text-decoration: none;
 }
+
 a:active {
     color: gray;
     background-color: transparent;
     text-decoration: none;
 }
+
 .header{
   padding: 25px 175px 25px 175px;
 }
+
 .btn-sm{
   font-size: 1em;
   width: 100px;
   padding: 6px 4px 6px 4px;
   border-color: #555555;
 }
+
 .above-nav{
   font-family:"open sans";
   font-size:.7em;
   color: #939393;
-  padding: 1.5rem 0rem 1rem 1.5rem;
+  padding: 1.5rem 0rem 1rem 1rem;
 }
 
 .navbar{
@@ -51,18 +59,25 @@ a:active {
 padding: 0rem 2rem 0rem 1rem;
 }
 
-/* .nav-item.active{
-  text-decoration: underline;
-} */
 .thickness{
-  display: inline-block;
-  border-bottom: 2px solid white;
+  border-bottom: .3em solid white;
 }
+
 .img-fluid.logo-header{
-  padding-top: 16px;
+  padding-top: 2em;
+  padding-left: 10em;
 }
-.border-{
+.page-one-middle{
+  background-image: url("img/background-texture.svg");
+}
+.border{
   border-color: #555555;
+}
+.border-padding{
+  padding:.5em;
+}
+.border-margin{
+  margin: .5em;
 }
 .background-wht{
   background-color: #ffffff;
@@ -83,6 +98,7 @@ padding: 0rem 2rem 0rem 1rem;
 .text-dk-gray{
   color: #666666;
 }
+
 .text-wht{
   color: #ffffff;
 }
@@ -91,15 +107,39 @@ padding: 0rem 2rem 0rem 1rem;
   color: #b7a174;
 }
 
-.carousel-indicators{
-  width:30px;
+.text-lt-blue{
+  color: #93acc7;
 }
+
+.text-brt-blue{
+  color: #079ee0;
+}
+
+.text-green{
+  color: #3faf6c;
+}
+.news{
+  padding-left: .5em;
+}
+
+.products{
+  padding: .5em .5em .5em .5em;
+  margin-top: .5em;
+}
+.carousel-indicators{
+  bottom: -15em;
+  justify-content: left;
+  margin-left: 0em;
+}
+
 .widgets{
   margin: 4px 0px;
 }
+
 .card{
   border:6px solid #000000;
 }
+
 .form{
   background-color: #ffffff;
   color:#000000;
@@ -113,25 +153,33 @@ padding: 0rem 2rem 0rem 1rem;
   padding: 30px 200px 30px 200px;
 }
 
-.footer{
+.footer-padding{
   padding: 25px 175px 25px 175px;
 }
+
 /* .row-footer{
   margin-right: 15px;
 } */
+.bg-lt-gray{
+  background-color: #acacac;
+}
 .bg-gray-footer{
 background-color: #383838;
+width:100%
 }
 
 .bg-gray-bottom{
   background-color: #3f3f3f;
 }
+
 .footer-bottom{
   width:100%
 }
+
 .bg-gray-top{
   background-color:#363636;
 }
+
 .phone-align{
   margin-right: 30px;
 }
@@ -139,14 +187,18 @@ background-color: #383838;
 .support-align{
   margin-right: 7px;
 }
+
 .gps-align{
   margin-right: 7px;
 }
+
 .list-row-height{
   line-height: 2;
 }
+.speech-bubble { position: relative; background: #d3deea; border-radius: 0em; } .speech-bubble:after { content: ''; position: absolute; right: 0; top: 70%; width: 0; height: 0; border: 9px solid transparent; border-left-color: #d3deea; border-right: 0; margin-top: -9px; margin-right: -9px;
+ }
 
-footer div div:nth-of-type(3) ul li:nth-of-type(1){
+footer div:nth-of-type(3) ul li:nth-of-type(1){
   border-top: 0px;
   border-right: 0px;
   border-bottom: 0px;
@@ -156,7 +208,7 @@ footer div div:nth-of-type(3) ul li:nth-of-type(1){
   margin-bottom: -10px;
 }
 
-footer div div:nth-of-type(3) ul li:nth-of-type(2){
+footer div:nth-of-type(3) ul li:nth-of-type(2){
   border-top: 1px;
   border-right: 0px;
   border-bottom: 0px;
@@ -166,7 +218,7 @@ footer div div:nth-of-type(3) ul li:nth-of-type(2){
   padding-top: 8px;
 }
 
-footer div div:nth-of-type(3) ul li:nth-of-type(3){
+footer div:nth-of-type(3) ul li:nth-of-type(3){
   border-top: 1px;
   border-right: 0px;
   border-bottom: 0px;
@@ -176,7 +228,7 @@ footer div div:nth-of-type(3) ul li:nth-of-type(3){
   padding-top: 8px;
 }
 
-footer div div:nth-of-type(3) ul li:nth-of-type(4){
+footer div:nth-of-type(3) ul li:nth-of-type(4){
   border-top: 1px;
   border-right: 0px;
   border-bottom: 0px;

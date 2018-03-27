@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="css/fontawesome-all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 </head>
 
 <body>
@@ -16,35 +17,41 @@
     <!-- Navagation bar -->
     <nav class="navbar bg-gray-top text-white small header">
       <div class="row">
+        <!-- logo -->
         <div class="col-md-3 background-wht">
           <a class="navbar-logo" href="#"><img class="img-fluid logo-header" src="img/logo-header.png" alt="NortSea"></a>
         </div>
+        <!-- logo end  -->
         <div class="col-md-9 text-nowrap">
-        <div class="col-md-auto">
-          <div class="row above-nav d-flex justify-content-between">
-            <div class="col-md-auto">
-              <a href="mailto:info@hellohelp.com"><i class="fas fa-envelope text-gray link"></i> info@hellohelp.com</a>
 
-            </div>
-            <div class="col-md-auto">
-              <a href="phone"><i class="fas fa-phone text-gray" data-fa-transform="flip-h"> </i>+440 875369208</a>
-            </div>
-            <!-- Log in > -->
-            <div class="col-md-auto">
-              <div class="btn-group dropright">
-                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                LOG IN
-              </button>
+          <div class="col-md-auto">
+            <!--upper nav-->
+            <div class="row above-nav d-flex justify-content-between">
+              <div class="col-md-auto">
+                <a href="mailto:info@hellohelp.com"><i class="fas fa-envelope text-gray link"></i> info@hellohelp.com</a>
+              </div>
 
-                <div class="col-md-auto">
-                  <div class="dropdown">
-                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      EN
-                    </button>
-                  </div>
-                </div>
-
+              <div class="col-md-auto">
+                <a href="phone"><i class="fas fa-phone text-gray" data-fa-transform="flip-h"> </i>+440 875369208</a>
+              </div>
+              <!-- Log in > -->
+              <div class="col-md-auto">
                 <div class="btn-group dropright">
+                  <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LOG IN
+                </button>
+                </div>
+              </div>
+              <div class="col-md-auto">
+                <div class="dropdown">
+                  <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      EN
+                </button>
+                </div>
+              </div>
+              <div class="col-md-auto">
+                <div class="btn-group dropright">
+                  <!-- button group > -->
                   <button type="button" class="btn btn-sm btn-outline-secondary rounded-0">
                     <div class="d-inline">
                       <i class="fab fa-facebook fa-lg mt-1 mr-2 ml-2"></i>
@@ -58,302 +65,388 @@
                     <div class="d-inline">
                       <i class="fas fa-envelope fa-lg mt-1 mr-2"></i>
                     </div>
-
-                </div>
+                </div><!-- button group end > -->
               </div>
             </div>
           </div>
+
           <!-- NAVAGATION BAR -->
           <div class="row">
             <nav class="navbar navbar-expand-lg navbar-dark bg-black">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item active thickness">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about-us.html">About Us</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <div class="thickness">
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Services
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="products.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">Massage</a>
+                          <a class="dropdown-item" href="#">Restaurant Reservations</a>
+                          <a class="dropdown-item" href="#">Hiking Guide</a>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="products.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Products
                   </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-search fa-lg"></i></a>
+                          </li>
+                        </div>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-search fa-lg"></i></a>
-                      </li>
+                    </ul>
                     </div>
-                  </li>
-                </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-        </div>
-      </div>
+                  </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+    <!--close col-md-9-->
+    </div>
     </nav>
 
     <!-- Under the navagation bar -->
-<div class="jumbotron jumbotron-fluid bg-dark text-wht">
-  <div class="container header">
-      <div class="row">
+    <div class="jumbotron jumbotron-fluid bg-dark text-wht"> <!--jumbotron open-->
+      <div class="container header">
+        <div class="row">
 
 
-        <div class="col-md-9">
-          <div class="row">
-            <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <h5 class="display-4">35%</h5>
-                  <p class="lead">YOU ENTER SUMMER WITH <br> REFRESHING RATES</p>
+          <div class="col-md-9">
+            <!-- <div class="row"> -->
+              <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block img-fluid" src="img/summer-rates.png" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="img.beach/png" alt="Second slide">
+                  </div>
                 </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="..." alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="..." alt="Third slide">
-                </div>
+              </div>
+            <!-- </div> -->
+            <!-- <div class="row">
+              <button type="button" name="button" class="btn btn-light btn-sm rounded-0">EXPLORE IT</button>
+            </div> -->
+          </div>
+
+          <div class="col-md-3">
+            <div class="row widgets">
+              <div class="col-auto img-fluid"><img src="img/sunny-img.png" alt="weather">
+              </div>
+            </div>
+            <div class="row widgets">
+              <div class="col-auto img-fluid"><img src="img/gallery-img.png" alt="weather">
+              </div>
+            </div>
+            <div class="row widgets">
+              <div class="col-md-auto img-fluid"><img src="img/360-virtual.png" alt="weather">
               </div>
             </div>
           </div>
-          <div class="row">
-            <button type="button" name="button" class="btn btn-light btn-sm rounded-0">EXPLORE IT</button>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="row widgets">
-            <div class="col-auto img-fluid"><img src="img/sunny-img.png" alt="weather">
-            </div>
-          </div>
-          <div class="row widgets">
-            <div class="col-auto img-fluid"><img src="img/gallery-img.png" alt="weather">
-            </div>
-          </div>
-          <div class="row widgets">
-            <div class="col-md-auto img-fluid"><img src="img/360-virtual.png" alt="weather">
-            </div>
-          </div>
-        </div>
         </div>
         <!-- FORM -->
         <section class="tool-bar bg-dark text-wht small">
           <div class="row">
-                <div class="col-md-12 m-10 d-flex justify-content-center">
+            <div class="col-md-12 m-10 d-flex justify-content-center">
+              <div class="row">
+                <div class="col-md-2">
+                  <h4 class="form p-2 m-0"><i class="fas fa-hospital"></i> Hotel</h4>
+                </div>
+                <div class="col-md-10">
+                  <!-- </div> -->
+                </div>
+                <div class="row form">
                   <div class="row">
-                    <div class="col-md-2">
-                      <h4 class="form p-2 m-0"><i class="fas fa-hospital"></i> Hotel</h4>
+
+                    <div class="md-form">
+                      <label for="date-picker-example">Arrival</label>
+                      <input placeholder="01/01/2018" type="date" class="form-control datepicker">
                     </div>
-                    <div class="col-md-10">
-                    <!-- </div> -->
+
+                    <div class="md-form">
+                      <label for="date-picker-example">Going</label>
+                      <input placeholder="01/01/2018" type="date" class="form-control datepicker">
+                      </label>
                     </div>
-                  <div class="row form">
-                    <div class="row">
 
-                      <div class="md-form">
-                        <label for="date-picker-example">Arrival</label>
-                        <input placeholder="01/01/2018" type="date" class="form-control datepicker">
-                      </div>
-
-                      <div class="md-form">
-                        <label for="date-picker-example">Going</label>
-                        <input placeholder="01/01/2018" type="date" class="form-control datepicker">
-                        </label>
-                      </div>
-
-                      <div class="form-group">
-                        <div class="col-md-auto">
-                          <label for="exampleFormControlSelect1">Room</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
+                    <div class="form-group">
+                      <div class="col-md-auto">
+                        <label for="exampleFormControlSelect1">Room</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
                           <option>5</option>
                         </select>
-                        </div>
                       </div>
-                      <div class="form-group">
-                        <div class="col-md-auto">
-                          <label for="exampleFormControlSelect1">Person</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-auto">
+                        <label for="exampleFormControlSelect1">Person</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
                           <option>5</option>
                         </select>
-                        </div>
                       </div>
-                      <div class="form-group">
-                        <div class="col-md-auto">
-                          <label for="exampleFormControlSelect1">Child</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-auto">
+                        <label for="exampleFormControlSelect1">Child</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
                           <option>5</option>
                         </select>
-                        </div>
                       </div>
-                      <div class="form-group">
-                        <div class="col-md-auto">
-                          <label for="exampleFormControlSelect1">Day</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-auto">
+                        <label for="exampleFormControlSelect1">Day</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
                           <option>5</option>
                         </select>
-                        </div>
                       </div>
-                      <div class="col-md-auto mt-4">
-                        <button type="button" class="btn btn-secondary rounded-0" name="button">SEARCH BOOK</button>
-                      </div>
+                    </div>
+                    <div class="col-md-auto mt-4">
+                      <button type="button" class="btn btn-secondary rounded-0" name="button">SEARCH BOOK</button>
                     </div>
                   </div>
+                </div>
         </section>
-      </div>
-  </div>
+        </div>
+        </div>
+        <!-- </div> -->
+      </div><!--container header close-->
+    </div><!--jumbotron close-->
 
-  <!-- AMAZING TRAVEL   DISCOVER   BOOK YOUR TRIP   NICE SUPPORT -->
-  <section>
-    <div class="row content-padding">
-      <div class="col-md-3 small">
-        <img class="img-fluid" src="img/amazing-travel.png" alt="amazing travel">
-        <h6>Amazing Travel</h6>
-        <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-        <div class="container">
-          <p class=""> Read more <i class="fas fa-caret-right"></i></p>
-          <div id="demo" class="collapse">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <!-- AMAZING TRAVEL   DISCOVER   BOOK YOUR TRIP   NICE SUPPORT -->
+    <section class="page-one-middle">
+          <div class="row content-padding">
+            <div class="col-md-3 small">
+              <img class="img-fluid" src="img/amazing-travel.png" alt="amazing travel">
+              <h6>Amazing Travel</h6>
+              <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+              <div class="container">
+                <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+                <div id="demo" class="collapse">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3 small">
+              <img class="img-fluid" src="img/discover.png" alt="discover">
+              <h6>Discover</h6>
+              <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+            <div class="col-md-3 small">
+              <img class="img-fluid" src="img/book-your-trip.png" alt="book your trip">
+              <h6>Book Your Trip</h6>
+              <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+            <div class="col-md-3 small">
+              <img class="img-fluid" src="img/nice-support.png" alt="nice support">
+              <h6>Nice Support</h6>
+              <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+          </div>
+
+
+        <!-- ABOUT HOTEL -->
+        <div class="row d-flex justify-content-center small content-padding">
+          <h2 class="text-gold">About Hotel</h2>
+          <p></p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </div>
+
+        <!-- CARDS -->
+        <div class="row text-center d-flex justify-content-center small">
+          <div class="col-md-3">
+            <div class="card w-100 border-dark m-3 rounded-0">
+              <div class="card-body">
+                <h5 class="card-title">RESTAURANT & BANQUET</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card w-100 border-dark m-3 rounded-0">
+              <div class="card-body">
+                <h5 class="card-title">ROOMS</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card w-100 border-dark m-3 rounded-0">
+              <div class="card-body">
+                <h5 class="card-title">BAR</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center d-flex justify-content-center small">
+          <div class="col-md-3">
+            <div class="card w-100 border-dark m-3 rounded-0">
+              <div class="card-body">
+                <h5 class="card-title">GYM</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card w-100 border-dark m-3 rounded-0">
+              <div class="card-body">
+                <h5 class="card-title">SPA</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card w-100 border-dark m-3 rounded-0">
+              <div class="card-body">
+                <h5 class="card-title">CAR PARKING</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
+                <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- NEWS & ANNOUNCEMENTS -->
+      <div class="row d-flex justify-content-center small content-padding">
+        <div class="col-md-8 news border border-padding">
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="text-lt-blue news">News</h6>
+            </div>
+            <div class="col-md-6 text-right text-lt-gray">
+              <i class="far fa-circle fa-xs"></i> <i class="fas fa-circle fa-xs"> </i> <i class="fas fa-circle fa-xs"></i>
+            </div>
+          </div>
+          <div class="row border-margin">
+            <div class="col-md-6 bg-lt-gray text-wht">
+              <i class="far fa-calendar-alt"></i><br>29 <br>Jan
+            </div>
+            <div class="col-md-6">
+              <h6>Lorem ipsum dolor sit amet</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+          </div>
+          <div class="row border-margin">
+            <div class="col-md-6 bg-lt-gray text-wht">
+              <i class="far fa-calendar-alt"></i><br>15 <br>Feb
+            </div>
+            <div class="col-md-6">
+              <h6>Lorem ipsum dolor sit amet</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+          </div>
+          <div class="row border-margin">
+            <div class="col-md-6 bg-lt-gray text-wht">
+              <i class="far fa-calendar-alt"></i><br>2 <br>Mar
+            </div>
+            <div class="col-md-6">
+              <h6>Lorem ipsum dolor sit amet</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+          </div>
+          <div class="row border-margin">
+            <div class="col-md-12 text-center border border-padding">
+              View All >
+            </div>
           </div>
         </div>
 
-      </div>
-      <div class="col-md-3 small">
-        <img class="img-fluid" src="img/discover.png" alt="discover">
-        <h6>Discover</h6>
-        <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-        <p class=""> Read more <i class="fas fa-caret-right"></i></p>
-      </div>
-      <div class="col-md-3 small">
-        <img class="img-fluid" src="img/book-your-trip.png" alt="book your trip">
-        <h6>Book Your Trip</h6>
-        <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-        <p class=""> Read more <i class="fas fa-caret-right"></i></p>
-      </div>
-      <div class="col-md-3 small">
-        <img class="img-fluid" src="img/nice-support.png" alt="nice support">
-        <h6>Nice Support</h6>
-        <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-        <p class=""> Read more <i class="fas fa-caret-right"></i></p>
-      </div>
-    </div>
-    </div>
-  </section>
-  <!-- ABOUT HOTEL -->
-  <div class="row d-flex justify-content-center small content-padding">
-    <h2 class="text-gold">About Hotel</h2>
-    <p></p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-  </div>
+        <div class="col-md-4"> <!--announcements-->
+          <div class="border border-padding">
+          <div class="row border-margin">
+            <div class="col-md-6">
+              <h6 class="text-green">Announcements</h6>
+            </div>
+            <div class="col-md-6 text-right text-lt-gray">
+              <i class="far fa-circle fa-xs"></i> <i class="fas fa-circle fa-xs"> </i> <i class="fas fa-circle fa-xs"></i>
+            </div>
+          </div>
+          <div class="row border-margin">
+            <div class="col-md-12">
+              <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+          </div>
+          <hr align="center">
+          <div class="row border-margin">
+            <div class="col-md-12">
+              <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+              <p class=""> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+          </div>
+        </div>
+          <div class="row products">
+            <div class="col-md-12 border-margin">
+              <div class="border border-padding">
+              <h6 class="text-brt-blue">Products</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+              <p class="text-brt-blue"> Read more <i class="fas fa-caret-right"></i></p>
+            </div>
+          </div>
 
-  <!-- CARDS -->
-  <div class="row text-center d-flex justify-content-center small">
-    <div class="col-md-3">
-      <div class="card w-100 border-dark m-3 rounded-0">
-        <div class="card-body">
-          <h5 class="card-title">RESTAURANT & BANQUET</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
-          <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
-        </div>
+          </div>
+        </div> <!--announcements close-->
       </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card w-100 border-dark m-3 rounded-0">
-        <div class="card-body">
-          <h5 class="card-title">ROOMS</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
-          <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card w-100 border-dark m-3 rounded-0">
-        <div class="card-body">
-          <h5 class="card-title">BAR</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
-          <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row text-center d-flex justify-content-center small">
-    <div class="col-md-3">
-      <div class="card w-100 border-dark m-3 rounded-0">
-        <div class="card-body">
-          <h5 class="card-title">GYM</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
-          <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card w-100 border-dark m-3 rounded-0">
-        <div class="card-body">
-          <h5 class="card-title">SPA</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
-          <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card w-100 border-dark m-3 rounded-0">
-        <div class="card-body">
-          <h5 class="card-title">CAR PARKING</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p>
-          <a href="#" class="btn btn-none font-italic">Read more <i class="fas fa-caret-right"></i> </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-  <!-- NEWS & ANNOUNCEMENTS -->
+    </section>
+    <!-- FOOTER -->
 
-  <!-- FOOTER -->
-
-  <footer class=" row bg-gray-footer footer text-lt-gray small">
+    <footer class="row bg-gray-footer  text-lt-gray small footer-padding">
 
       <div class="col-md-3">
         <h6>NortSea About</h6>
@@ -396,14 +489,13 @@
             <p class="text-gold">GPS:</p>
             <p class="text-left gps-align">12.021211-118.469009</p>
           </li>
-
         </ul>
       </div>
       <div class="col-md-3 my-auto">
         <a class="navbar-logo"><img class="img-fluid" src="img/logo-footer.png" alt="NortSea"></a>
       </div>
-
-    <div class="row bg- footer-bottom small">
+    </footer>
+    <div class="row footer-bottom bg-gray-bottom text-lt-gray small footer-padding">
       <div class="col-md-8">
         Copyright <i class="far fa-copyright"></i> 2015 NORTSEA | <a href="about-us.html">About NORTSEA</a> | <a href="mailto:support@nortsea.com">Contact Support</a>
       </div>
@@ -411,9 +503,10 @@
         Designed by Faith34
       </div>
     </div>
-  </footer>
 
-  </div>
+
+
+    </div>
 </body>
 
 </html>
