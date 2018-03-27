@@ -27,26 +27,42 @@ a:active {
     background-color: transparent;
     text-decoration: none;
 }
-
+.header{
+  padding: 25px 175px 25px 175px;
+}
+.btn-sm{
+  font-size: 1em;
+  width: 100px;
+  padding: 6px 4px 6px 4px;
+  border-color: #555555;
+}
 .above-nav{
   font-family:"open sans";
   font-size:.7em;
   color: #939393;
-  padding: 0rem 0rem 0rem 2rem;
+  padding: 1.5rem 0rem 1rem 1.5rem;
 }
 
 .navbar{
-  padding: 1.5rem 1rem 0rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 .nav-item{
 padding: 0rem 2rem 0rem 1rem;
 }
 
-.nav-item.active{
+/* .nav-item.active{
   text-decoration: underline;
-  padding-bottom: 3px;
-
+} */
+.thickness{
+  display: inline-block;
+  border-bottom: 2px solid white;
+}
+.img-fluid.logo-header{
+  padding-top: 16px;
+}
+.border-{
+  border-color: #555555;
 }
 .background-wht{
   background-color: #ffffff;
@@ -64,6 +80,9 @@ padding: 0rem 2rem 0rem 1rem;
   color: #acacac;
 }
 
+.text-dk-gray{
+  color: #666666;
+}
 .text-wht{
   color: #ffffff;
 }
@@ -85,18 +104,84 @@ padding: 0rem 2rem 0rem 1rem;
   background-color: #ffffff;
   color:#000000;
 }
+
 .tool-bar{
   margin: 50px 0px 25px 0px;
 }
 
+.content-padding{
+  padding: 30px 200px 30px 200px;
+}
+
 .footer{
-  padding: 30px 20px 30px 20px;
+  padding: 25px 175px 25px 175px;
+}
+/* .row-footer{
+  margin-right: 15px;
+} */
+.bg-gray-footer{
+background-color: #383838;
 }
 
 .bg-gray-bottom{
   background-color: #3f3f3f;
 }
-
+.footer-bottom{
+  width:100%
+}
 .bg-gray-top{
   background-color:#363636;
+}
+.phone-align{
+  margin-right: 30px;
+}
+
+.support-align{
+  margin-right: 7px;
+}
+.gps-align{
+  margin-right: 7px;
+}
+.list-row-height{
+  line-height: 2;
+}
+
+footer div div:nth-of-type(3) ul li:nth-of-type(1){
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-color: #464646;
+  border-style: solid;
+  margin-bottom: -10px;
+}
+
+footer div div:nth-of-type(3) ul li:nth-of-type(2){
+  border-top: 1px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-color: #464646;
+  border-style: solid;
+  padding-top: 8px;
+}
+
+footer div div:nth-of-type(3) ul li:nth-of-type(3){
+  border-top: 1px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-color: #464646;
+  border-style: solid;
+  padding-top: 8px;
+}
+
+footer div div:nth-of-type(3) ul li:nth-of-type(4){
+  border-top: 1px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-color: #464646;
+  border-style: solid;
+  padding-top: 8px;
 }
