@@ -219,6 +219,12 @@ padding: .75rem;
   margin: .75rem .5rem .75rem .5rem;
 }
 
+.btn-margin-direction{
+  width: 50px;
+  height:38px;
+  margin: .75rem .25rem .75rem .25rem;
+}
+
 .social-media-styling{
   padding-left: .5rem;
 }
