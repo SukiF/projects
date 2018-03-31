@@ -52,18 +52,12 @@
               <div class="col-md-auto">
                 <div class="btn-group dropright">
                   <!-- button group > -->
-                  <button type="button" class="btn btn-sm btn-outline-secondary rounded-0">
-                    <div class="d-inline">
-                      <i class="fab fa-facebook fa-lg mt-1 mr-2 ml-2"></i>
-                    </div>
-                    <div class="d-inline">
-                      <i class="fab fa-twitter fa-lg mt-1 mr-2"></i>
-                    </div>
-                    <div class="d-inline">
-                      <i class="fab fa-instagram fa-lg mt-1 mr-2"></i>
-                    </div>
-                    <div class="d-inline">
-                      <i class="fas fa-envelope fa-lg mt-1 mr-2"></i>
+
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/" class="social-media-styling"><i class="fab fa-facebook fa-sm"></i></a>
+                        <a href="https://www.twitter.com/" class="social-media-styling"><i class="fab fa-twitter fa-sm"></i></a>
+                        <a href="https://www.dribble.com/" class="social-media-styling"><i class="fab fa-dribbble fa-sm"></i></a>
+                        <a href="https://www.instagram.com/" class="social-media-styling"><i class="fab fa-instagram fa-sm"></i></a>
                     </div>
                 </div><!-- button group end > -->
               </div>
@@ -92,7 +86,7 @@
                     Services
                     </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Massage</a>
+                          <a class="dropdown-item" href="services.html">Services</a>
                           <a class="dropdown-item" href="#">Restaurant Reservations</a>
                           <a class="dropdown-item" href="#">Hiking Guide</a>
                       </li>
@@ -102,9 +96,9 @@
                     Products
                   </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="products.html">Products</a>
+                          <a class="dropdown-item" href="#">Pebbles</a>
+                          <a class="dropdown-item" href="#">Stones</a>
                           <li class="nav-item">
                             <a class="nav-link" href="gallery.html">Gallery</a>
                           </li>
@@ -154,20 +148,22 @@
     <!--page title and breadcrumbs end-->
     <div class="row bg-gray-top d-flex justify-content-center font-georgia small content-padding">
       <h5 class="text-gold font-stretch">WHERE WE ARE</h5>
+      <div class="w-100"></div>
       <div class="col-med-12 text-lt-gray text-center small text-padding font-italic">
         <p class="font-weight-bold ">1300 Blvd Santa Monica, CA 92405 United States</p>
         <p>02563234234</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row content-padding">
       <div class="col-sm-6">
         <div class="row">
           <h4>Contact Info</h4>
-          <p class="text-lt-gray small">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
+          <p class="text-lt-gray small contact-info">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
             te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
         </div>
-              <div class="col-sm-6">
-                <div class="row">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
                   <p><span class="text-gold">Address:</span><br>
                     <span class="text-lt-gray small">95 Fake Ave, Door 6<br>
                     Wonderland,CA 94107, USA</span></p>
@@ -179,19 +175,24 @@
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="row">
+
                   <div class="row">
                     <p><span class="text-gold">Email:</span><br>
                       <span class="text-lt-gray small">info@waxom.com<br>
                       support@waxom.com</span></p>
                   </div>
-                </div>
+
                 <div class="row">
                   <div class="row">
-                    <p><span class="text-gold">Social Network:</span><br>
+                    <p><span class="text-gold social">Social Network:</span><br>
+                      <a href="https://www.facebook.com/" class="social-media-styling social"><i class="fab fa-facebook fa-xs"></i></a>
+                      <a href="https://www.twitter.com/" class="social-media-styling"><i class="fab fa-twitter fa-xs"></i></a>
+                      <a href="https://www.dribble.com/" class="social-media-styling"><i class="fab fa-dribbble fa-xs"></i></a>
+                      <a href="https://www.instagram.com/" class="social-media-styling"><i class="fab fa-instagram fa-xs"></i></a>
                     </p>
                   </div>
                 </div>
+              </div>
               </div>
       </div>
       <div class="col-sm-6">
@@ -200,7 +201,7 @@
           <div class="input-group mb-3">
             <div class="input-group-prepend">
             </div>
-            <input type="text" class="form-control" placeholder="Your Name" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" class="form-control border-gold" placeholder="Your Name" aria-label="Username" aria-describedby="basic-addon1">
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -210,12 +211,21 @@
           <div class="input-group mb-3">
             <div class="input-group-prepend">
             </div>
-            <input type="text" class="form-control" placeholder="Your Message" aria-label="Username" aria-describedby="basic-addon1">
+            <textarea class="form-control text-box-contact mx-auto aria-label=" placeholder="Your Message" With textarea"></textarea>
           </div>
           <button type="button" class="btn btn-secondary rounded-0">Send Message</button>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="input-group">
+          </div>
+          <textarea class="form-control text-box-contact mx-auto aria-label="With textarea"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- FOOTER -->
 
     <footer class="row bg-gray-footer  text-lt-gray small footer-padding">
@@ -272,13 +282,16 @@
         Copyright <i class="far fa-copyright"></i> 2015 NORTSEA | <a href="about-us.html">About NORTSEA</a> | <a href="mailto:support@nortsea.com">Contact Support</a>
       </div>
       <div class="col-md-4 text-right">
-        Designed by Faith34
+        Designed by Fatih34
       </div>
     </div>
 
 
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

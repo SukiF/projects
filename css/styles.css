@@ -51,6 +51,7 @@ a:active {
   font-size:.7rem;
   color: #939393;
   padding: 1.5rem 0rem 1rem 1rem;
+  margin-right:4rem;
 }
 
 .navbar{
@@ -78,6 +79,9 @@ padding: 0rem 2rem 0rem 1.5rem;
   border-color: #555555;
 }
 
+.border-gold{
+  border-color: #b7a174;
+}
 .border-padding{
   padding:.5rem;
 }
@@ -105,6 +109,7 @@ padding: 0rem 2rem 0rem 1.5rem;
   font-weight: 800;
   padding-top:.75rem;
 }
+
 .link-color{
   text-decoration: none;
 }
@@ -171,23 +176,23 @@ padding: 0rem 2rem 0rem 1.5rem;
   background-color: #ffffff;
   color:#000000;
   padding: 1rem 2.5rem 1rem 2.5rem;
+  border-bottom: #acacac .25rem solid;
+  width:90%;
 }
 
 .hotel-button{
-  padding: .4rem .2rem .4rem 1.2rem;
-}
-
-.tool-bar{
-  margin: 4rem 0rem 4rem 0rem;
-  border-bottom: #acacac .25rem solid;
+  margin-bottom:-.25rem;
+  margin-left: -1rem;
 }
 
 .content-padding{
   padding: 30px 12% 30px 12%;
 }
+
 .container-gallery{
   padding: 30px 15% 30px 15%;
 }
+
 .content-padding-news{
   padding: 30px 12% 30px 14%;
 }
@@ -229,9 +234,18 @@ padding: .75rem 0rem;
   height:38px;
   margin: .75rem .25rem .75rem .25rem;
 }
-
+.social-media{
+  border: .06rem solid #6c757d;
+  padding: .3rem .4rem .3rem .3rem;
+}
+.social{
+  margin-left: .75rem;
+}
 .social-media-styling{
   padding-left: .5rem;
+}
+.contact-info{
+  width:80%;
 }
 .border-top{
   margin-top: 1.5rem;
@@ -259,10 +273,6 @@ width:100%
   background-color: #3f3f3f;
   width:100%
 }
-/*
-.footer{
-  width:100%
-} */
 
 .bg-gray-nav{
   background-color:#313131;
@@ -293,6 +303,10 @@ border-bottom: 1px solid #ffffff;
 font-size: .75rem;
 }
 
+.text-box-contact{
+  width: 80%;
+  margin-bottom: 4rem;
+}
 footer div:nth-of-type(3) ul li:nth-of-type(1){
   border-top: 0px;
   border-right: 0px;

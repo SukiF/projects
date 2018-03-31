@@ -52,19 +52,12 @@
               <div class="col-md-auto">
                 <div class="btn-group dropright">
                   <!-- button group > -->
-                  <button type="button" class="btn btn-sm btn-outline-secondary rounded-0">
-                    <div class="d-inline">
-                      <i class="fab fa-facebook fa-lg mt-1 mr-2 ml-2"></i>
-                    </div>
-                    <div class="d-inline">
-                      <i class="fab fa-twitter fa-lg mt-1 mr-2"></i>
-                    </div>
-                    <div class="d-inline">
-                      <i class="fab fa-instagram fa-lg mt-1 mr-2"></i>
-                    </div>
-                    <div class="d-inline">
-                      <i class="fas fa-envelope fa-lg mt-1 mr-2"></i>
-                    </div>
+                  <div class="social-media">
+                      <a href="https://www.facebook.com/" class="social-media-styling"><i class="fab fa-facebook fa-sm"></i></a>
+                      <a href="https://www.twitter.com/" class="social-media-styling"><i class="fab fa-twitter fa-sm"></i></a>
+                      <a href="https://www.dribble.com/" class="social-media-styling"><i class="fab fa-dribbble fa-sm"></i></a>
+                      <a href="https://www.instagram.com/" class="social-media-styling"><i class="fab fa-instagram fa-sm"></i></a>
+                  </div>
                 </div><!-- button group end > -->
               </div>
             </div>
@@ -93,7 +86,7 @@
                     Services
                     </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Massage</a>
+                          <a class="dropdown-item" href="services.html">Services</a>
                           <a class="dropdown-item" href="#">Restaurant Reservations</a>
                           <a class="dropdown-item" href="#">Hiking Guide</a>
                       </li>
@@ -103,9 +96,9 @@
                     Products
                   </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="products.html">Products</a>
+                          <a class="dropdown-item" href="#">Pebbles</a>
+                          <a class="dropdown-item" href="#">Stones</a>
                           <li class="nav-item">
                             <a class="nav-link" href="gallery.html">Gallery</a>
                           </li>
@@ -198,9 +191,9 @@
 <div class="row content-padding">
   <div class="col-md-3 text-center mb-5">
     <div class="card-no-border" style="width: 10rem;">
-  <img class="card-img-top img-fluid img-padding" src="img/img-placeholder.png" alt="image cap placeholder">
+  <img class="card-img-top img-fluid img-padding" src="img/tiger.png" alt="image cap placeholder">
   <div class="">
-    <h5 class="card-title">John Doe</h5>
+    <h5 class="card-title">Tiger</h5>
     <p class="text-lt-gray font-size-xs">Founder</p>
     <p class="card-text text-lt-gray small">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
   </div>
@@ -215,9 +208,9 @@
   <div class="col-md-3">
     <div class="col-md-3 text-center mb-5">
       <div class="card-no-border" style="width: 10rem;">
-    <img class="card-img-top img-fluid img-padding" src="img/img-placeholder.png" alt="image cap placeholder">
+    <img class="card-img-top img-fluid img-padding" src="img/bear.png" alt="image cap placeholder">
     <div class="">
-      <h5 class="card-title">John Doe</h5>
+      <h5 class="card-title">Bear</h5>
       <p class="text-lt-gray font-size-xs">Founder</p>
       <p class="card-text text-lt-gray small">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
     </div>
@@ -233,9 +226,9 @@
   <div class="col-md-3">
     <div class="col-md-3 text-center mb-5">
       <div class="card-no-border" style="width: 10rem;">
-    <img class="card-img-top img-fluid img-padding" src="img/img-placeholder.png" alt="image cap placeholder">
+    <img class="card-img-top img-fluid img-padding" src="img/lion.png" alt="image cap placeholder">
     <div class="">
-      <h5 class="card-title">John Doe</h5>
+      <h5 class="card-title">Lion</h5>
       <p class="text-lt-gray font-size-xs">Founder</p>
       <p class="card-text text-lt-gray small">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
     </div>
@@ -251,9 +244,9 @@
   <div class="col-md-3">
     <div class="col-md-3 text-center mb-5">
       <div class="card-no-border" style="width: 10rem;">
-    <img class="card-img-top img-fluid img-padding" src="img/img-placeholder.png" alt="image cap placeholder">
+    <img class="card-img-top img-fluid img-padding" src="img/bobcat.png" alt="image cap placeholder">
     <div class="">
-      <h5 class="card-title">John Doe</h5>
+      <h5 class="card-title">Bobcat</h5>
       <p class="text-lt-gray font-size-xs">Founder</p>
       <p class="card-text text-lt-gray small">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
     </div>
@@ -325,13 +318,16 @@
         Copyright <i class="far fa-copyright"></i> 2015 NORTSEA | <a href="about-us.html">About NORTSEA</a> | <a href="mailto:support@nortsea.com">Contact Support</a>
       </div>
       <div class="col-md-4 text-right">
-        Designed by Faith34
+        Designed by Fatih34
       </div>
     </div>
 
 
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
