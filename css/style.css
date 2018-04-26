@@ -1,0 +1,38 @@
+h3{
+  font-family: 'Quattrocento', serif;;
+}
+
+.card{
+    font-family: 'Quattrocento', serif;;
+}
+
+
+.font-size-sm{
+  font-size: .75rem;
+}
+
+.jumbotron{
+  background-image: url("../img/modern-library.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family:'Quattrocento', serif;
+}
+
+.navbar{
+  font-family: 'Quattrocento', serif;;
+}
+
+.btn-sm{
+  font-size: .65rem;
+  color:  #797d7f;
+}
+
+.table th, .table td{
+  padding: .5rem;
+  font-family: sans-serif;
+}
+
+.modal-title{
+  font-family:'Quattrocento', serif;
+  font-size: 2rem;
+}

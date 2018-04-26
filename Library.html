@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Techtonic Library</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/datatables.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
+  <script src="js/jquery-ui.js" charset="utf-8"></script>
+  <script src="js/bootstrap.bundle.js" charset="utf-8"></script>
+  <script src="js/datatables.js" charset="utf8"></script>
+  <script src="js/library.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Diplomata|Quattrocento" rel="stylesheet">
+  <!-- <script src="js/libraryTable.js" charset="utf-8"></script> -->
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <!-- container fluid open -->
+    <!-- Jumbotron open -->
+    <div class="jumbotron jumbotron-fluid text-center">
+      <div class="container text-white">
+        <h1 class="library title">Techtonic Library</h1>
+      </div>
+    </div>
+    <!-- Jumbotron end -->
+    <!-- navbar open -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" id="addBook" data-toggle="modal" data-target="#addBookModal" href="#!">Add A Book</a>
+      </li>
+
+      <div class="modal" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addBookModalLabel">Add Book</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Upload a Cover Image</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group">
+                  <label for="addBookInput1">Title</label>
+                  <input type="text" class="form-control" id="addBookInput1" placeholder="Add Book">
+                </div>
+                <div class="form-group">
+                  <label for="addBookInput2">Author</label>
+                  <input type="text" class="form-control" id="addBookInput2" placeholder="Author">
+                </div>
+              </form>
+              <div class="form-group">
+                <label for="addBookInput3">Number of Pages</label>
+                <input type="text" class="form-control" id="addBookInput3" placeholder="Number of Pages">
+              </div>
+              </form>
+              <div class="form-group">
+                <label for="addBookInput4">Publication Date</label>
+                <input type="text" class="form-control" id="addBookInput4" placeholder="Publication Date">
+              </div>
+
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button id="addBookBtn" type="button" class="btn btn-outline-secondary btn-sm" type="submit">Add Book</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" id="authorsLibrary" data-toggle="modal" data-target="#authorsModal" href="#!">Authors in the Library</a>
+      </li>
+
+      <div class="modal" id="authorsModal" tabindex="-1" role="dialog" aria-labelledby="authorsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="authorsModalLabel">Authors in our library</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+
+              <table id="authorTable" class="table authorTable table-hover text-center" style="width:100%">
+                <thead class="thead-lt">
+                  <tr>
+
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Number<br>of Pages</th>
+                    <th>Publication<br> Date</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- We Recommend -->
+      <li class="nav-item">
+        <a class="nav-link" id="getRandomBook" data-toggle="modal" data-target="#randomBookModal" href="#!">We Recommend</a>
+      </li>
+
+
+      <div class="modal" id="randomBookModal" tabindex="-1" role="dialog" aria-labelledby="randomBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">We Recommend...</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+              <div class="card">
+                <img class="card-img-top" id="coverImg" src="" alt="Card image">
+                <div class="card-body text-center">
+                  <h4 id="randomTitle" ></h4>
+                  <p id="randomAuthor"></p>
+                  <p id="randomPubDate"></p>
+                  <p id="randomNumPages"></p>
+                </div>
+                <p class="card-text text-center">book description</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+
+    <!-- Navbar end -->
+    <div class="row justify-content-left mt-5 ml-3">
+      <h2>Library</h2>
+      <div class="w-100">
+      </div>
+      <!-- <p>Select any book to see the details.</p> -->
+    </div>
+    <!-- Library
+    <!-container for book display-->
+    <div class="row ml-3 mb-2 mt-3">
+      <div class="column">
+
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="row justify-content-between mr-4 ml-4">
+      <div class="column-sm-10">
+        <div class="row">
+
+          <!-- example -->
+          <table id="myTable" class="table myTable table-hover text-center" style="width:100%">
+            <thead class="thead-lt">
+              <tr>
+                <th>Cover</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Number<br>of Pages</th>
+                <th>Publication<br> Date</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="column-sm-2">
+        <!--container for book card -->
+        <!-- <div class="card">
+              <img class="card-img-top" src="img/GreenEggs.jpg" alt="Card image">
+              <div class="card-body text-center">
+                <h2>We recommend...</h2>
+                <h4>Title</h4>
+                <p>Author</p>
+                <p>Date</p>
+                <p>number of pages</p>
+              </div>
+                <p class="card-text text-center">book description</p>
+            </div> -->
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>
