@@ -2,10 +2,6 @@ h3{
   font-family: 'Quattrocento', serif;;
 }
 
-h3{
-  font-family: 'Quattrocento', serif;;
-}
-
 .card{
     font-family: 'Quattrocento', serif;;
 }
@@ -39,4 +35,9 @@ h3{
 .modal-title{
   font-family:'Quattrocento', serif;
   font-size: 2rem;
+}
+
+.card-img-top{
+  height: 25%;
+  width: 25%;
 }

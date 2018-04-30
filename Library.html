@@ -32,7 +32,7 @@
     <!-- navbar open -->
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link active" id="addBook" data-toggle="modal" data-target="#addBookModal" href="#!">Add A Book</a>
+        <a class="nav-link active" id="addBook" data-toggle="modal" data-target="#addBookModal" href=" "javascript: void(0)" ">Add A Book</a>
       </li>
 
       <div class="modal" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
@@ -82,7 +82,7 @@
       </div>
 
       <li class="nav-item">
-        <a class="nav-link" id="authorsLibrary" data-toggle="modal" data-target="#authorsModal" href="#!">Authors in the Library</a>
+        <a class="nav-link" id="authorsLibrary" data-toggle="modal" data-target="#authorsModal" href="javascript: void(0)">Authors in the Library</a>
       </li>
 
       <div class="modal" id="authorsModal" tabindex="-1" role="dialog" aria-labelledby="authorsModalLabel" aria-hidden="true">
@@ -96,20 +96,9 @@
             </div>
             <div class="modal-body">
 
-              <table id="authorTable" class="table authorTable table-hover text-center" style="width:100%">
-                <thead class="thead-lt">
-                  <tr>
-
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Number<br>of Pages</th>
-                    <th>Publication<br> Date</th>
-                    <th>Remove</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
+              <ul class ="list-unstyled" >
+                <li id="authorName" >Author Name</li>
+              </ul>
 
             </div>
             <div class="modal-footer">
@@ -121,7 +110,7 @@
 
 <!-- We Recommend -->
       <li class="nav-item">
-        <a class="nav-link" id="getRandomBook" data-toggle="modal" data-target="#randomBookModal" href="#!">We Recommend</a>
+        <a class="nav-link" id="getRandomBook" data-toggle="modal" data-target="#randomBookModal" href=""javascript: void(0)" ">We Recommend</a>
       </li>
 
 
@@ -136,7 +125,7 @@
             </div>
             <div class="modal-body">
               <div class="card">
-                <img class="card-img-top" id="coverImg" src="" alt="Card image">
+                <img class="card-img-top align-content-center" id="coverImg" src="" alt="Card image">
                 <div class="card-body text-center">
                   <h4 id="randomTitle" ></h4>
                   <p id="randomAuthor"></p>
@@ -178,8 +167,8 @@
             <thead class="thead-lt">
               <tr>
                 <th>Cover</th>
-                <th>Title</th>
                 <th>Author</th>
+                <th>Title</th>
                 <th>Number<br>of Pages</th>
                 <th>Publication<br> Date</th>
                 <th>Remove</th>

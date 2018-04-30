@@ -11,40 +11,36 @@ var Library;
     library_instance = this;
 
     // all the functionality
-    library_instance._books = [];
-    library_instance.libraryKey = libraryKey;
+    this.bookCollection = [];
+    this.libraryKey = libraryKey;
 
     return library_instance;
   };
 }());
 
+
 Library.prototype.init = function() {
   this.$addBookBtn = $("#addBookBtn");
   this.$body = $("body");
-  // this.$deleteIcon = $(".delete");
   this.$getRandomBook = $("#getRandomBook");
-  window.Library().getLibrary();
+  this.getLibrary();
   this._setUpTable();
-  this._removeRow();
-  // window.gLib.getLibrary();
-
   this._bindEvents();
   return false;
 };
 
 Library.prototype._bindEvents = function() {
-
   this.$addBookBtn.on("click", $.proxy(this._btnAddABook, this));
-  this.$deleteIcon.on("click", $.proxy(this._removeRow, this));
   this.$body.on("updateLibrary", $.proxy(this._handleUpdateLibrary, this));
   this.$getRandomBook.on("click",$.proxy(this._handlegetRandomBook, this));
+  $(document).on("click", ".delete", $.proxy(this._removeRow, this));
   return false;
 };
 
-Library.prototype._setUpTable = function() {
-  var books = this._books;
+Library.prototype._setUpTable = function(){
+  var books = this.bookCollection;
   this.myTable = $("#myTable").DataTable({
-    data: this._books,
+    data: this.bookCollection,
     columns: [{
         data: "image",
         render: function(data, type, row, meta) {
@@ -80,14 +76,17 @@ Library.prototype._setUpTable = function() {
     ]
   });
   this.tableApi = $("#myTable").dataTable();
-  this.$deleteIcon = $(".delete");
-  this.$deleteIcon.on("click", $.proxy(this._removeRow, this));
 };
 
-Library.prototype._removeRow = function() {
-  this.myTable.row($(".delete").parents('tr'))
-    .remove()
-    .draw();
+Library.prototype._removeRow = function(e) {
+  $(e.currentTarget).parent().parent().remove();
+  var parsedHTML = $.parseHTML($(e.currentTarget).parent().parent("tr").html());
+   var title = $(parsedHTML[2]).html();
+   if( confirm("Are you sure you want to delete this row?") ) {
+       this.removeBookbyTitle(title);
+       this.setLibrary();
+       // this.myTable.draw(false);
+   }
 };
 
 
@@ -97,14 +96,8 @@ Library.prototype._btnAddABook = function() {
   var author = $('#addBookInput2').val();
   var numPages = $('#addBookInput3').val();
   var pubDate = $('#addBookInput4').val();
-  var jsonBook = {};
   var options = {year: 'numeric', month: 'long', day: 'numeric' };
-  jsonBook["title"] = title;
-  jsonBook["author"] = author;
-  jsonBook["numPages"] = numPages;
-  jsonBook["pubDate"] = pubDate;
-  gLib.addBook(new Book(jsonBook));
-  gLib.setLibrary();
+  this.addBook(new Book({title: title, author: author, numPages: numPages, pubDate: pubDate}));
   this.tableApi.fnDestroy();
   this._setUpTable();
 };
@@ -141,22 +134,22 @@ Library.prototype.addBook = function(book) {
       return false;
     }
   }
-  for (var j = 0; j < this._books.length; j++) {
-    if (this._books[j].title === book.title) {
+  for (var j = 0; j < this.bookCollection.length; j++) {
+    if (this.bookCollection[j].title === book.title) {
       return false;
     }
   }
-  this._books.push(book);
+  this.bookCollection.push(book);
   this.updateLibrary();
-  localStorage.setItem(this.libraryKey, JSON.stringify(this._books));
+  this.setLibrary();
   return true;
 };
 
 //remove book title
 Library.prototype.removeBookbyTitle = function(title) {
-  for (var i = 0; i < this._books.length; i++) {
-    if (this._books[i].title === title) {
-      this._books.splice(i, 1);
+  for (var i = 0; i < this.bookCollection.length; i++) {
+    if (this.bookCollection[i].title === title) {
+      this.bookCollection.splice(i, 1);
       this.updateLibrary();
       return true;
     }
@@ -167,9 +160,9 @@ Library.prototype.removeBookbyTitle = function(title) {
 //remove book by author
 Library.prototype.removeBooksbyAuthor = function(author) {
   var result = false;
-  for (var i = this._books.length - 1; i >= 0; i--) {
-    if (this._books[i].author === author) {
-      this._books.splice(i, 1);
+  for (var i = this.bookCollection.length - 1; i >= 0; i--) {
+    if (this.bookCollection[i].author === author) {
+      this.bookCollection.splice(i, 1);
       this.updateLibrary();
       result = true;
     }
@@ -179,32 +172,34 @@ Library.prototype.removeBooksbyAuthor = function(author) {
 
 //get random Book
 Library.prototype.getRandomBook = function() {
-  if (this._books.length === 0) {
+  if (this.bookCollection.length === 0) {
     return null;
   }
-  return this._books[Math.floor(Math.random() * this._books.length)];
+  return this.bookCollection[Math.floor(Math.random() * this.bookCollection.length)];
 };
 
+// Need to finish this
 Library.prototype.displayImage = function() {
-        $("#coverImg").attr("src", "");
+        $("#coverImg").attr("src", "image");
     };
 
 
 Library.prototype.displayRandomBook = function() {
   var book = this.getRandomBook();
-  $('#randomTitle').val(book.title);
-  $('#randomAuthor').val(book.author);
-  $('#randomNumPages').val(book.numPages);
-  $('#randomPubDate').val(book.pubDate);
+  $('#coverImg').attr('src',book.image)
+  $('#randomTitle').text(book.title);
+  $('#randomAuthor').text(book.author);
+  $('#randomNumPages').text(book.numPages);
+  $('#randomPubDate').text(book.pubDate.toLocaleDateString('us-en'));
 };
 
 //get book by title
 Library.prototype.getBookByTitle = function(title) {
   var tempArray = [];
   var titleSearch = new RegExp(title, "i");
-  for (var i = 0; i < this._books.length; i++) {
-    if (titleSearch.test(this._books[i].title)) {
-      tempArray.push(this._books[i]);
+  for (var i = 0; i < this.bookCollection.length; i++) {
+    if (titleSearch.test(this.bookCollection[i].title)) {
+      tempArray.push(this.bookCollection[i]);
     }
   }
   return tempArray;
@@ -214,9 +209,9 @@ Library.prototype.getBookByTitle = function(title) {
 Library.prototype.getBooksByAuthor = function(author) {
   var tempArray = [];
   var authorSearch = new RegExp(author, "i");
-  for (var i = 0; i < this._books.length; i++) {
-    if (authorSearch.test(this._books[i].author)) {
-      tempArray.push(this._books[i]);
+  for (var i = 0; i < this.bookCollection.length; i++) {
+    if (authorSearch.test(this.bookCollection[i].author)) {
+      tempArray.push(this.bookCollection[i]);
     }
   }
   return tempArray;
@@ -242,9 +237,9 @@ Library.prototype.addBooks = function(books) {
 //Get authors
 Library.prototype.getAuthors = function() {
   var authorArray = [];
-  for (var i = 0; i < this._books.length; i++) {
-    if (authorArray.indexOf(this._books[i].author) === -1) {
-      authorArray.push(this._books[i].author);
+  for (var i = 0; i < this.bookCollection.length; i++) {
+    if (authorArray.indexOf(this.bookCollection[i].author) === -1) {
+      authorArray.push(this.bookCollection[i].author);
     }
   }
   return authorArray;
@@ -252,10 +247,10 @@ Library.prototype.getAuthors = function() {
 
 //getRandomAuthorName
 Library.prototype.getRandomAuthorName = function() {
-  if (this._books.length === 0) {
+  if (this.bookCollection.length === 0) {
     return null;
   }
-  return this._books[Math.floor(Math.random() * this._books.length)].author;
+  return this.bookCollection[Math.floor(Math.random() * this.bookCollection.length)].author;
 };
 
 //search function for one or more properties
@@ -269,18 +264,22 @@ Library.prototype.searchProperties = function(string) {
 };
 
 //stringify & localStorage
-Library.prototype.setLibrary = function(libraryKey) {
-  localStorage.setItem(libraryKey, JSON.stringify(this._books));
+Library.prototype.setLibrary = function() {
+  localStorage.setItem(this.libraryKey, JSON.stringify(this.bookCollection));
   return true;
 };
 
-Library.prototype.getLibrary = function(libraryKey) {
+Library.prototype.getLibrary = function() {
 
-  var tempArray = JSON.parse(localStorage.getItem(libraryKey));
+  var tempArray = JSON.parse(localStorage.getItem(this.libraryKey));
+  if(tempArray !== null){
   for (var i = 0; i < tempArray.length; i++){
     var book = new Book(tempArray[i]);
     this.addBook(book);
-  }
+    }
+  } else {
+      tempArray=[];
+}
 };
 
 $(document).ready(function(e) {
@@ -296,7 +295,7 @@ var gIT = new Book({
   pubDate: "January 1, 2016"
 });
 var gTheStand = new Book({
-  image: "img/img125px/it.jpg",
+  image: "img/img125px/TheStand.jpg",
   title: "The Stand",
   author: "Stephen King",
   numPages: 1348,
@@ -372,5 +371,12 @@ var gTheodoreBooneTheAccused = new Book({
   numPages: 253,
   pubDate: "September 20, 2009"
 });
+var gTheodoreBooneTheFugitive = new Book({
+  image: "img/img125px/theFugitive.jpg",
+  title: "Theodore Boone: The Fugitive",
+  author: "John Grisham",
+  numPages: 257,
+  pubDate: "May 12, 2011"
+});
 
-var myBooks = [gCatcherInTheRye, gAHouseLikeaLotus, gGreenEggsAndHam, gAWrinkleInTime, gTheodoreBooneKidLawyer, gTheodoreBooneTheAccused, gTheodoreBooneTheActivist, gAPlaceToStand, gTheStand, gGlutenFree1, gGlutenFree2];
+var myBooks = [gCatcherInTheRye, gAHouseLikeaLotus, gGreenEggsAndHam, gAWrinkleInTime, gTheodoreBooneKidLawyer, gTheodoreBooneTheAccused, gTheodoreBooneTheActivist, gTheodoreBooneTheFugitive, gAPlaceToStand, gTheStand, gIT, gGlutenFree1, gGlutenFree2];
