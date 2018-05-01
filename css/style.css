@@ -1,11 +1,20 @@
-h3{
+h3, h2, h1{
   font-family: 'Quattrocento', serif;;
 }
 
 .card{
-    font-family: 'Quattrocento', serif;;
+    font-family: 'Quattrocento', serif;
 }
 
+.table-hover{
+color: #4f0b9b;
+background-color:#e3dbff;
+}
+
+.thead{
+background-color:#301f7c;
+color: white;
+}
 
 .font-size-sm{
   font-size: .75rem;
@@ -15,7 +24,6 @@ h3{
   background-image: url("../img/modern-library.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  font-family:'Quattrocento', serif;
 }
 
 .navbar{
@@ -24,12 +32,12 @@ h3{
 
 .btn-sm{
   font-size: .65rem;
-  color:  #797d7f;
+  color:  #4f0b9b;
 }
 
 .table th, .table td{
   padding: .5rem;
-  font-family: sans-serif;
+  font-family: 'Quattrocento';
 }
 
 .modal-title{
@@ -40,4 +48,21 @@ h3{
 .card-img-top{
   height: 25%;
   width: 25%;
+}
+.library-title{
+  font-size: 4rem;
+  font-family:'Quattrocento', serif;
+}
+.nav-link{
+  color: #4f0b9b;
+  font-family:'Quattrocento', serif;
+}
+
+.removeTheAuthor{
+  font-size: 1rem;
+  color:    #4f0b9b;
+}
+
+.bg{
+  background: linear-gradient(to bottom, #ccccff 0%, #000066 100%);
 }

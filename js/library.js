@@ -18,6 +18,17 @@ var Library;
   };
 }());
 
+//book object
+var Book = function(arg) {
+  this.image = arg.image;
+  this.title = arg.title;
+  this.author = arg.author;
+  this.numPages = arg.numPages;
+  this.pubDate = new Date(arg.pubDate);
+};
+
+//new Library
+var gLib = new Library("libraryStorage");
 
 Library.prototype.init = function() {
   this.$addBookBtn = $("#addBookBtn");
@@ -34,7 +45,40 @@ Library.prototype._bindEvents = function() {
   this.$body.on("updateLibrary", $.proxy(this._handleUpdateLibrary, this));
   this.$getRandomBook.on("click",$.proxy(this._handlegetRandomBook, this));
   $(document).on("click", ".delete", $.proxy(this._removeRow, this));
+  $("#authorsModal").on("show.bs.modal",$.proxy(this._handlegetAuthors, this));
+  $("#authorsInLibrary").on("click", ".authorHTML", $.proxy(this._handleremoveBooksbyAuthor, this));
   return false;
+};
+
+Library.prototype._handleUpdateLibrary = function() {
+  this.tableApi.fnDestroy();
+  this._setUpTable();
+};
+
+Library.prototype._handlegetRandomBook = function() {
+  this.displayRandomBook();
+};
+
+Library.prototype._handleremoveBooksbyAuthor = function(e) {
+  var author = $(e.currentTarget).text();
+  this.removeBooksbyAuthor(author);
+  location.reload();
+};
+
+Library.prototype._handlegetAuthors = function() {
+  var authorHTML = "";
+  var authors = this.getAuthors();
+  authors.forEach (function (author){
+  authorHTML=authorHTML +  "<li class = \"authorHTML\">" +  author +"</li>";
+  });
+  $("#authorsInLibrary").empty();
+  $("#authorsInLibrary").append(authorHTML);
+};
+
+
+
+Library.prototype.updateLibrary = function() {
+  this.$body.trigger("updateLibrary");
 };
 
 Library.prototype._setUpTable = function(){
@@ -85,47 +129,29 @@ Library.prototype._removeRow = function(e) {
    if( confirm("Are you sure you want to delete this row?") ) {
        this.removeBookbyTitle(title);
        this.setLibrary();
-       // this.myTable.draw(false);
    }
 };
 
 
 Library.prototype._btnAddABook = function() {
-
+  var image = $('#exampleFormControlFile1').val();
+  image = image.replace("C:\\fakepath\\", "");
+  image = "img/img125px/" + image;
+    console.log(image);
   var title = $('#addBookInput1').val();
   var author = $('#addBookInput2').val();
   var numPages = $('#addBookInput3').val();
   var pubDate = $('#addBookInput4').val();
   var options = {year: 'numeric', month: 'long', day: 'numeric' };
-  this.addBook(new Book({title: title, author: author, numPages: numPages, pubDate: pubDate}));
+
+  this.addBook(new Book({image: image, title: title, author: author, numPages: numPages, pubDate: pubDate}));
   this.tableApi.fnDestroy();
   this._setUpTable();
+  $("#addBookForm").trigger('reset');
 };
 
 
-Library.prototype._handleUpdateLibrary = function() {
-  this.tableApi.fnDestroy();
-  this._setUpTable();
-};
 
-Library.prototype._handlegetRandomBook = function() {
-  this.displayRandomBook();
-};
-
-//book object
-var Book = function(arg) {
-  this.image = arg.image;
-  this.title = arg.title;
-  this.author = arg.author;
-  this.numPages = arg.numPages;
-  this.pubDate = new Date(arg.pubDate);
-};
-//new Library
-var gLib = new Library("libraryStorage");
-
-Library.prototype.updateLibrary = function() {
-  this.$body.trigger("updateLibrary");
-};
 
 //add book function
 Library.prototype.addBook = function(book) {
@@ -164,6 +190,7 @@ Library.prototype.removeBooksbyAuthor = function(author) {
     if (this.bookCollection[i].author === author) {
       this.bookCollection.splice(i, 1);
       this.updateLibrary();
+      this.setLibrary();
       result = true;
     }
   }
@@ -186,13 +213,17 @@ Library.prototype.displayImage = function() {
 
 Library.prototype.displayRandomBook = function() {
   var book = this.getRandomBook();
-  $('#coverImg').attr('src',book.image)
+  $('#coverImg').attr('src',book.image);
   $('#randomTitle').text(book.title);
   $('#randomAuthor').text(book.author);
   $('#randomNumPages').text(book.numPages);
   $('#randomPubDate').text(book.pubDate.toLocaleDateString('us-en'));
 };
 
+Library.prototype.displayAuthors = function() {
+  var book = this.displayAuthors();
+  $('#authorsLibrary').text(book.author);
+};
 //get book by title
 Library.prototype.getBookByTitle = function(title) {
   var tempArray = [];
@@ -290,91 +321,91 @@ $(document).ready(function(e) {
 var gIT = new Book({
   image: "img/img125px/It.jpg",
   title: "IT",
-  author: "Stephen King",
+  author: "King, Stephen",
   numPages: 1169,
   pubDate: "January 1, 2016"
 });
 var gTheStand = new Book({
   image: "img/img125px/TheStand.jpg",
   title: "The Stand",
-  author: "Stephen King",
+  author: "King, Stephen",
   numPages: 1348,
   pubDate: "June 24, 2008"
 });
 var gAPlaceToStand = new Book({
   image: "img/img125px/APlacetoStand.jpg",
   title: "A Place To Stand",
-  author: "Jimmy Santiago Baca ",
+  author: "Santiago Baca, Jimmy",
   numPages: 276,
   pubDate: "December 1, 2007"
 });
 var gGlutenFree1 = new Book({
   image: "img/img125px/GlutenFree1.jpg",
   title: "Gluten-Free on a Shoestring: 250 Easy Recipes for Eating Well on the Cheap",
-  author: "Nicole Hunn",
+  author: "Hunn, Nicole",
   numPages: 298,
   pubDate: "October 10, 2017"
 });
 var gGlutenFree2 = new Book({
   image: "img/img125px/GlutenFree2.jpg",
   title: "Gluten-Free on a Shoestring Bakes Bread",
-  author: "Nicole Hunn",
+  author: "Hunn, Nicole",
   numPages: 203,
   pubDate: "December 10, 2013"
 });
 var gCatcherInTheRye = new Book({
   image: "img/img125px/Catcher.jpg",
   title: "Catcher In The Rye",
-  author: "JD Salinger",
+  author: "Salinger, JD ",
   numPages: 200,
   pubDate: "July 16, 1951"
 });
 var gGreenEggsAndHam = new Book({
   image: "img/img125px/GreenEggs.jpg",
   title: "Green Eggs And Ham",
-  author: "Dr. Seuss",
+  author: "Seuss, Dr.",
   numPages: 35,
   pubDate: "August 12, 1960"
 });
 var gAWrinkleInTime = new Book({
   image: "img/img125px/Wrinkle.jpg",
   title: "A Wrinkle In Time",
-  author: "Madeleine L'Engle",
+  author: "L'Engle, Madeleine",
   numPages: 368,
   pubDate: "September 20, 1968"
 });
 var gAHouseLikeaLotus = new Book({
   image: "img/img125px/HouseLikeaLotus.jpg",
   title: "A House Like a Lotus",
-  author: "Madeleine L'Engle",
+  author: "L'Engle, Madeleine",
   numPages: 336,
   pubDate: "February 14, 2012"
 });
 var gTheodoreBooneKidLawyer = new Book({
   image: "img/img125px/KidLawyer.jpg",
   title: "Theodore Boone: Kid Lawyer",
-  author: "John Grisham",
+  author: "Grisham, John",
   numPages: 273,
   pubDate: "November 10, 2011"
 });
 var gTheodoreBooneTheActivist = new Book({
   image: "img/img125px/TheActivist.jpg",
   title: "Theodore Boone: The Activist",
-  author: "John Grisham",
+  author: "Grisham, John",
   numPages: 373,
   pubDate: "November 10, 2010"
 });
 var gTheodoreBooneTheAccused = new Book({
   image: "img/img125px/TheAccused.jpg",
   title: "Theodore Boone: The Accused",
-  author: "John Grisham",
+  author: "Grisham, John",
   numPages: 253,
   pubDate: "September 20, 2009"
 });
 var gTheodoreBooneTheFugitive = new Book({
   image: "img/img125px/theFugitive.jpg",
   title: "Theodore Boone: The Fugitive",
-  author: "John Grisham",
+  author: "Grisham, John",
   numPages: 257,
   pubDate: "May 12, 2011"
 });
