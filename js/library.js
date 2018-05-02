@@ -19,12 +19,14 @@ var Library;
 }());
 
 //book object
-var Book = function(arg) {
-  this.image = arg.image;
-  this.title = arg.title;
-  this.author = arg.author;
-  this.numPages = arg.numPages;
-  this.pubDate = new Date(arg.pubDate);
+class Book {
+  constructor(image, title, author,numPages, pubDate){
+    this.name = 'Book';
+    this.image = image;
+    this.title = title;
+    this.author = author;
+    this.numPages = numPages;
+    this.pubDate = new Date(pubDate);
 };
 
 //new Library
