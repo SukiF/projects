@@ -1,14 +1,13 @@
-//book object
+
+
 class Book {
-  constructor(image, title, author, numPages, pubDate) {
-    this.name = 'Book';
-    this.image = image;
-    this.title = title;
-    this.author = author;
-    this.numPages = numPages;
-    this.pubDate = new Date(pubDate);
-  }
-};
+  constructor(book){
+    this.image = book.image;
+    this.title = book.title;
+    this.author = book.author;
+    this.numPages = book.numPages;
+    this.pubDate = new Date(book.pubDate);
+}};
 
 class Library {
   constructor(libraryKey) {
@@ -226,7 +225,6 @@ class Library {
     return tempArray;
   };
 
-
   //get book by author
   getBooksByAuthor(author) {
     let tempArray = [];
@@ -241,11 +239,6 @@ class Library {
 
   //add books
   addBooks(books) {
-    for (let i = 0; i < books.length; i++) {
-      if (!Array.isArray(books)) {
-        return false;
-      }
-    }
 
     let bookCount = 0;
     for (let j = 0; j < books.length; j++) {
@@ -292,7 +285,6 @@ class Library {
   };
 
   getLibrary() {
-
     let tempArray = JSON.parse(localStorage.getItem(this.libraryKey));
     if (tempArray !== null) {
       for (let i = 0; i < tempArray.length; i++) {
@@ -302,14 +294,13 @@ class Library {
     } else {
       tempArray = [];
     }
-
   };
 };
 //new Library
 let gLib = new Library("libraryStorage");
 
 $(document).ready(function(e) {
-  const gLib = new Library();
+  var gLib = new Library("libraryStorage");
   gLib.init();
   gLib.addBooks(myBooks);
 });
