@@ -19,7 +19,7 @@ class Library {
 
   init() {
     this.$addBookBtn = $("#addBookBtn");
-    this.$body = $("body");
+    this.$update = $("update");
     this.$getRandomBook = $("#getRandomBook");
     this.getLibrary();
     this._setUpTable();
@@ -29,7 +29,7 @@ class Library {
 
   _bindEvents() {
     this.$addBookBtn.on("click", $.proxy(this._btnAddABook, this));
-    this.$body.on("updateLibrary", $.proxy(this._handleUpdateLibrary, this));
+    this.$update.on("updateLibrary", $.proxy(this._handleUpdateLibrary, this));
     this.$getRandomBook.on("click", $.proxy(this._handlegetRandomBook, this));
     $(document).on("click", ".delete", $.proxy(this._removeRow, this));
     $("#authorsModal").on("show.bs.modal", $.proxy(this._handlegetAuthors, this));
@@ -63,7 +63,7 @@ class Library {
   };
 
   updateLibrary() {
-    this.$body.trigger("updateLibrary");
+    this.$update.trigger("updateLibrary");
   };
 
   _setUpTable() {
@@ -309,8 +309,9 @@ class Library {
 let gLib = new Library("libraryStorage");
 
 $(document).ready(function(e) {
-  window.gLib = new Library();
-  window.gLib.init();
+  const gLib = new Library();
+  gLib.init();
+  gLib.addBooks(myBooks);
 });
 
 const gIT = new Book({
