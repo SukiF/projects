@@ -12,7 +12,7 @@ class Book {
 
 class Library {
   constructor(libraryKey) {
-    this._books = [];
+    this.bookCollection = [];
     this.libraryKey = libraryKey;
   }
 
@@ -47,14 +47,14 @@ class Library {
   };
 
   _handleremoveBooksbyAuthor(e) {
-    var author = $(e.currentTarget).text();
+    let author = $(e.currentTarget).text();
     this.removeBooksbyAuthor(author);
     location.reload();
   };
 
   _handlegetAuthors() {
-    var authorHTML = "";
-    var authors = this.getAuthors();
+    let authorHTML = "";
+    let authors = this.getAuthors();
     authors.forEach(function(author) {
       authorHTML = authorHTML + "<li class = \"authorHTML\">" + author + "</li>";
     });
@@ -67,7 +67,7 @@ class Library {
   };
 
   _setUpTable() {
-    var books = this.bookCollection;
+    let books = this.bookCollection;
     this.myTable = $("#myTable").DataTable({
       data: this.bookCollection,
       columns: [{
@@ -109,8 +109,8 @@ class Library {
 
   _removeRow(e) {
     $(e.currentTarget).parent().parent().remove();
-    var parsedHTML = $.parseHTML($(e.currentTarget).parent().parent("tr").html());
-    var title = $(parsedHTML[2]).html();
+    let parsedHTML = $.parseHTML($(e.currentTarget).parent().parent("tr").html());
+    let title = $(parsedHTML[2]).html();
     if (confirm("Are you sure you want to delete this row?")) {
       this.removeBookbyTitle(title);
       this.setLibrary();
@@ -118,14 +118,14 @@ class Library {
   };
 
   _btnAddABook() {
-    var image = $('#exampleFormControlFile1').val();
+    let image = $('#exampleFormControlFile1').val();
     image = image.replace("C:\\fakepath\\", "");
     image = "img/img125px/" + image;
-    var title = $('#addBookInput1').val();
-    var author = $('#addBookInput2').val();
-    var numPages = $('#addBookInput3').val();
-    var pubDate = $('#addBookInput4').val();
-    var options = {
+    let title = $('#addBookInput1').val();
+    let author = $('#addBookInput2').val();
+    let numPages = $('#addBookInput3').val();
+    let pubDate = $('#addBookInput4').val();
+    let options = {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -145,12 +145,12 @@ class Library {
 
   //add book function
   addBook(book) {
-    for (var i = 0; i < book.length; i++) {
+    for (let i = 0; i < book.length; i++) {
       if (Array.isArray(book)) {
         return false;
       }
     }
-    for (var j = 0; j < this.bookCollection.length; j++) {
+    for (let j = 0; j < this.bookCollection.length; j++) {
       if (this.bookCollection[j].title === book.title) {
         return false;
       }
@@ -163,7 +163,7 @@ class Library {
 
   //remove book title
   removeBookbyTitle(title) {
-    for (var i = 0; i < this.bookCollection.length; i++) {
+    for (let i = 0; i < this.bookCollection.length; i++) {
       if (this.bookCollection[i].title === title) {
         this.bookCollection.splice(i, 1);
         this.updateLibrary();
@@ -175,8 +175,8 @@ class Library {
 
   //remove book by author
   removeBooksbyAuthor(author) {
-    var result = false;
-    for (var i = this.bookCollection.length - 1; i >= 0; i--) {
+    let result = false;
+    for (let i = this.bookCollection.length - 1; i >= 0; i--) {
       if (this.bookCollection[i].author === author) {
         this.bookCollection.splice(i, 1);
         this.updateLibrary();
@@ -201,7 +201,7 @@ class Library {
   };
 
   displayRandomBook() {
-    var book = this.getRandomBook();
+    let book = this.getRandomBook();
     $('#coverImg').attr('src', book.image);
     $('#randomTitle').text(book.title);
     $('#randomAuthor').text(book.author);
@@ -210,15 +210,15 @@ class Library {
   };
 
   displayAuthors() {
-    var book = this.displayAuthors();
+    let book = this.displayAuthors();
     $('#authorsLibrary').text(book.author);
   };
 
   //get book by title
   getBookByTitle(title) {
-    var tempArray = [];
-    var titleSearch = new RegExp(title, "i");
-    for (var i = 0; i < this.bookCollection.length; i++) {
+    let tempArray = [];
+    let titleSearch = new RegExp(title, "i");
+    for (let i = 0; i < this.bookCollection.length; i++) {
       if (titleSearch.test(this.bookCollection[i].title)) {
         tempArray.push(this.bookCollection[i]);
       }
@@ -229,9 +229,9 @@ class Library {
 
   //get book by author
   getBooksByAuthor(author) {
-    var tempArray = [];
-    var authorSearch = new RegExp(author, "i");
-    for (var i = 0; i < this.bookCollection.length; i++) {
+    let tempArray = [];
+    let authorSearch = new RegExp(author, "i");
+    for (let i = 0; i < this.bookCollection.length; i++) {
       if (authorSearch.test(this.bookCollection[i].author)) {
         tempArray.push(this.bookCollection[i]);
       }
@@ -241,14 +241,14 @@ class Library {
 
   //add books
   addBooks(books) {
-    for (var i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
       if (!Array.isArray(books)) {
         return false;
       }
     }
 
-    var bookCount = 0;
-    for (var j = 0; j < books.length; j++) {
+    let bookCount = 0;
+    for (let j = 0; j < books.length; j++) {
       if (this.addBook(books[j])) {
         bookCount++;
       }
@@ -258,8 +258,8 @@ class Library {
 
   //Get authors
   getAuthors() {
-    var authorArray = [];
-    for (var i = 0; i < this.bookCollection.length; i++) {
+    let authorArray = [];
+    for (let i = 0; i < this.bookCollection.length; i++) {
       if (authorArray.indexOf(this.bookCollection[i].author) === -1) {
         authorArray.push(this.bookCollection[i].author);
       }
@@ -277,7 +277,7 @@ class Library {
 
   //search function for one or more properties
   searchProperties(string) {
-    var bookSelection = [];
+    let bookSelection = [];
     // this.getBookByTitle(string);
     bookSelection.push(this.getBookByTitle(string));
     // this.getBooksByAuthor(string);
@@ -293,10 +293,10 @@ class Library {
 
   getLibrary() {
 
-    var tempArray = JSON.parse(localStorage.getItem(this.libraryKey));
+    let tempArray = JSON.parse(localStorage.getItem(this.libraryKey));
     if (tempArray !== null) {
-      for (var i = 0; i < tempArray.length; i++) {
-        var book = new Book(tempArray[i]);
+      for (let i = 0; i < tempArray.length; i++) {
+        let book = new Book(tempArray[i]);
         this.addBook(book);
       }
     } else {
@@ -306,98 +306,98 @@ class Library {
   };
 };
 //new Library
-var gLib = new Library("libraryStorage");
+let gLib = new Library("libraryStorage");
 
 $(document).ready(function(e) {
   window.gLib = new Library();
   window.gLib.init();
 });
 
-var gIT = new Book({
+const gIT = new Book({
   image: "img/img125px/It.jpg",
   title: "IT",
   author: "King, Stephen",
   numPages: 1169,
   pubDate: "January 1, 2016"
 });
-var gTheStand = new Book({
+const gTheStand = new Book({
   image: "img/img125px/TheStand.jpg",
   title: "The Stand",
   author: "King, Stephen",
   numPages: 1348,
   pubDate: "June 24, 2008"
 });
-var gAPlaceToStand = new Book({
+const gAPlaceToStand = new Book({
   image: "img/img125px/APlacetoStand.jpg",
   title: "A Place To Stand",
   author: "Santiago Baca, Jimmy",
   numPages: 276,
   pubDate: "December 1, 2007"
 });
-var gGlutenFree1 = new Book({
+const gGlutenFree1 = new Book({
   image: "img/img125px/GlutenFree1.jpg",
   title: "Gluten-Free on a Shoestring: 250 Easy Recipes for Eating Well on the Cheap",
   author: "Hunn, Nicole",
   numPages: 298,
   pubDate: "October 10, 2017"
 });
-var gGlutenFree2 = new Book({
+const gGlutenFree2 = new Book({
   image: "img/img125px/GlutenFree2.jpg",
   title: "Gluten-Free on a Shoestring Bakes Bread",
   author: "Hunn, Nicole",
   numPages: 203,
   pubDate: "December 10, 2013"
 });
-var gCatcherInTheRye = new Book({
+const gCatcherInTheRye = new Book({
   image: "img/img125px/Catcher.jpg",
   title: "Catcher In The Rye",
   author: "Salinger, JD ",
   numPages: 200,
   pubDate: "July 16, 1951"
 });
-var gGreenEggsAndHam = new Book({
+const gGreenEggsAndHam = new Book({
   image: "img/img125px/GreenEggs.jpg",
   title: "Green Eggs And Ham",
   author: "Seuss, Dr.",
   numPages: 35,
   pubDate: "August 12, 1960"
 });
-var gAWrinkleInTime = new Book({
+const gAWrinkleInTime = new Book({
   image: "img/img125px/Wrinkle.jpg",
   title: "A Wrinkle In Time",
   author: "L'Engle, Madeleine",
   numPages: 368,
   pubDate: "September 20, 1968"
 });
-var gAHouseLikeaLotus = new Book({
+const gAHouseLikeaLotus = new Book({
   image: "img/img125px/HouseLikeaLotus.jpg",
   title: "A House Like a Lotus",
   author: "L'Engle, Madeleine",
   numPages: 336,
   pubDate: "February 14, 2012"
 });
-var gTheodoreBooneKidLawyer = new Book({
+const gTheodoreBooneKidLawyer = new Book({
   image: "img/img125px/KidLawyer.jpg",
   title: "Theodore Boone: Kid Lawyer",
   author: "Grisham, John",
   numPages: 273,
   pubDate: "November 10, 2011"
 });
-var gTheodoreBooneTheActivist = new Book({
+const gTheodoreBooneTheActivist = new Book({
   image: "img/img125px/TheActivist.jpg",
   title: "Theodore Boone: The Activist",
   author: "Grisham, John",
   numPages: 373,
   pubDate: "November 10, 2010"
 });
-var gTheodoreBooneTheAccused = new Book({
+const gTheodoreBooneTheAccused = new Book({
   image: "img/img125px/TheAccused.jpg",
   title: "Theodore Boone: The Accused",
   author: "Grisham, John",
   numPages: 253,
   pubDate: "September 20, 2009"
 });
-var gTheodoreBooneTheFugitive = new Book({
+const gTheodoreBooneTheFugitive = new Book({
   image: "img/img125px/theFugitive.jpg",
   title: "Theodore Boone: The Fugitive",
   author: "Grisham, John",
@@ -405,4 +405,4 @@ var gTheodoreBooneTheFugitive = new Book({
   pubDate: "May 12, 2011"
 });
 
-var myBooks = [gCatcherInTheRye, gAHouseLikeaLotus, gGreenEggsAndHam, gAWrinkleInTime, gTheodoreBooneKidLawyer, gTheodoreBooneTheAccused, gTheodoreBooneTheActivist, gTheodoreBooneTheFugitive, gAPlaceToStand, gTheStand, gIT, gGlutenFree1, gGlutenFree2];
+const myBooks = [gCatcherInTheRye, gAHouseLikeaLotus, gGreenEggsAndHam, gAWrinkleInTime, gTheodoreBooneKidLawyer, gTheodoreBooneTheAccused, gTheodoreBooneTheActivist, gTheodoreBooneTheFugitive, gAPlaceToStand, gTheStand, gIT, gGlutenFree1, gGlutenFree2];
