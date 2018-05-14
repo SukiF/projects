@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Web API 101 Project</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Web API 101 Project</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/datatables.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery-3.2.1.js" charset="utf-8"></script>
+  <script src="js/jquery-ui.js" charset="utf-8"></script>
+  <script src="js/WebAPI.js" charset="utf-8"></script>
+  <script src="js/datatables.js" charset="utf-8"></script>
+  <script src="js/meetup.js" charset="utf-8"></script>
+
+</head>
+
+<body>
   <h1>Web API 101 Project</h1>
-  </body>
+  <div class="APIform ">
+    <form class="MeetUpAPI" action="index.html" method="post">
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="city" class="form-control" id="numberResults" placeholder="City">
+      </div>
+    </form>
+    <form class="MeetUpAPI" action="index.html" method="post">
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="state" class="form-control" id="numberResults" placeholder="State">
+      </div>
+    </form>
+    <form class="MeetUpAPI" action="index.html" method="post">
+      <div class="form-group">
+        <label for="NumberResults">Number of results</label>
+        <input type="numResults" class="form-control" id="numberResults" placeholder="Number of results">
+      </div>
+    </form>
+    <button type="button" name="button">Submit</button>
+  </div>
+  <div class="tableResults">
+
+  </div>
+</body>
+
 </html>
