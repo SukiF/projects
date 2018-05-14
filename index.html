@@ -8,39 +8,50 @@
   <link rel="stylesheet" type="text/css" href="css/datatables.css">
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="js/jquery-3.2.1.js" charset="utf-8"></script>
-  <script src="js/jquery-ui.js" charset="utf-8"></script>
-  <script src="js/WebAPI.js" charset="utf-8"></script>
-  <script src="js/datatables.js" charset="utf-8"></script>
-  <script src="js/meetup.js" charset="utf-8"></script>
+  <script src="js/jquery-3.3.1.js" defer charset="utf-8"></script>
+  <script src="js/jquery-ui.js" defer charset="utf-8"></script>
+  <script src="js/datatables.js" defer charset="utf-8"></script>
+  <script src="js/WebAPI.js" defer charset="utf-8"></script>
 
 </head>
 
 <body>
-  <h1>Web API 101 Project</h1>
-  <div class="APIform ">
+  <h3>Meetup Project</h3>
+  <div class="container-fluid APIform d-flex p-2">
     <form class="MeetUpAPI" action="index.html" method="post">
       <div class="form-group">
-        <label for="city">City</label>
-        <input type="city" class="form-control" id="numberResults" placeholder="City">
+        <label for="country">Country</label>
+        <input type="text" class="form-control" id="country">
       </div>
-    </form>
-    <form class="MeetUpAPI" action="index.html" method="post">
       <div class="form-group">
         <label for="state">State</label>
-        <input type="state" class="form-control" id="numberResults" placeholder="State">
+        <input type="text" class="form-control" id="state">
       </div>
-    </form>
-    <form class="MeetUpAPI" action="index.html" method="post">
       <div class="form-group">
-        <label for="NumberResults">Number of results</label>
-        <input type="numResults" class="form-control" id="numberResults" placeholder="Number of results">
+        <label for="rowCount">Number of results</label>
+        <input type="text" class="form-control" id="rowCount">
       </div>
+    <button id="submitBtn" type="button" class="btn btnGetData btn-outline-secondary btn-sm" value="submit">Submit</button>
     </form>
-    <button type="button" name="button">Submit</button>
   </div>
-  <div class="tableResults">
 
+
+  <div class="tableResults d-flex p-2">
+<!-- Previous -->
+    <table id="tableResults" class="table tableResults table-hover text-center" style="width:100%">
+      <thead class="thead">
+        <tr>
+          <th class="city">City</th>
+          <th class="state">State</th>
+          <th class="zip">Zip Code</th>
+          <th class="country">Country</th>
+          <th class="rank">Ranking</th>
+          <th class="memCt">Member Count</th>
+        </tr>
+      </thead>
+      <tbody class="tBody">
+      </tbody>
+    </table>
   </div>
 </body>
 
