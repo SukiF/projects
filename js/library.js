@@ -279,23 +279,23 @@ class Library {
   };
 
   //stringify & localStorage
-  setLibrary() {
-    localStorage.setItem(this.libraryKey, JSON.stringify(this.bookCollection));
-    return true;
-  };
+  // setLibrary() {
+  //   localStorage.setItem(this.libraryKey, JSON.stringify(this.bookCollection));
+  //   return true;
+  // };
 
-  getLibrary() {
-    let tempArray = JSON.parse(localStorage.getItem(this.libraryKey));
-    if (tempArray !== null) {
-      for (let i = 0; i < tempArray.length; i++) {
-        let book = new Book(tempArray[i]);
-        this.addBook(book);
-      }
-    } else {
-      tempArray = [];
-    }
-  };
-};
+//   getLibrary() {
+//     let tempArray = JSON.parse(localStorage.getItem(this.libraryKey));
+//     if (tempArray !== null) {
+//       for (let i = 0; i < tempArray.length; i++) {
+//         let book = new Book(tempArray[i]);
+//         this.addBook(book);
+//       }
+//     } else {
+//       tempArray = [];
+//     }
+//   };
+// };
 //new Library
 let gLib = new Library("libraryStorage");
 
