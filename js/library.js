@@ -2,6 +2,7 @@
 
 class Book {
   constructor(book){
+    this._id = book._id;
     this.image = book.image;
     this.title = book.title;
     this.author = book.author;
@@ -70,6 +71,9 @@ class Library {
     this.myTable = $("#myTable").DataTable({
       data: this.bookCollection,
       columns: [{
+        {
+          data: "id"
+        },
           data: "image",
           render: function(data, type, row, meta) {
             return (" <img class=\"cover\" src=" + row.image + ">");
