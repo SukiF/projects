@@ -21,7 +21,7 @@ class Library {
     this.$addBookBtn = $("#addBookBtn");
     this.$update = $("update");
     this.$getRandomBook = $("#getRandomBook");
-    this.getLibrary();
+    this.getLibrary();//ajax request for Get
     this._setUpTable();
     this._bindEvents();
     return false;
@@ -159,6 +159,7 @@ class Library {
       }
     }
     this.bookCollection.push(book);
+    //ajax call goes here (post)
     this.updateLibrary();
     this.setLibrary();
     return true;
@@ -282,6 +283,29 @@ class Library {
     return bookSelection;
   };
 
+  addBookAjax() {
+        $.ajax({
+          dataType: 'json',
+          type: "POST",
+          url: "http://localhost:3000/library/",
+          // path: "/",
+          data: {
+            image : $('#exampleFormControlFile1').val();
+            title : $('#addBookInput1').val();
+            author : $('#addBookInput2').val();
+            pubDate : $('#addBookInput4').val();
+            numPages : $('#addBookInput3').val();
+          }
+        }).done(function(response){
+          console.log(response)}).fail(function(){
+          console.log("Your POST request has failed");
+        });
+      }
+
+
+
+  })
+}
   //stringify & localStorage
   // setLibrary() {
   //   localStorage.setItem(this.libraryKey, JSON.stringify(this.bookCollection));
