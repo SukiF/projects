@@ -21,7 +21,7 @@ class Library {
     this.$addBookBtn = $("#addBookBtn");
     this.$update = $("update");
     this.$getRandomBook = $("#getRandomBook");
-    this.getLibrary();//ajax request for Get
+    this.getLibrary();//replace with ajax request for Get
     this._setUpTable();
     this._bindEvents();
     return false;
@@ -159,7 +159,7 @@ class Library {
       }
     }
     this.bookCollection.push(book);
-    //ajax call goes here (post)
+    this.addBookAjax();//Post
     this.updateLibrary();
     this.setLibrary();
     return true;
@@ -283,12 +283,31 @@ class Library {
     return bookSelection;
   };
 
+  getBookAjax() {
+    $.ajax({
+      dataType: 'json',
+      type: "GET",
+      url: "http://localhost:3000/library/"
+    })
+    .done(function(response)){
+    let results=[];
+      for (var i = 0; i < response.length; i++) {
+        results.push(new Book(response[i]));
+      }
+      this.bookCollection = results;
+        console.log(results);
+            this.updateLibrary();
+    .fail(function(){
+      console.log("Your GET request has failed");
+    });
+  }
+
+
   addBookAjax() {
         $.ajax({
           dataType: 'json',
           type: "POST",
           url: "http://localhost:3000/library/",
-          // path: "/",
           data: {
             image : $('#exampleFormControlFile1').val();
             title : $('#addBookInput1').val();
