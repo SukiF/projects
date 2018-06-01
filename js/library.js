@@ -1,14 +1,14 @@
-
-
 class Book {
-  constructor(book){
-    this._id = book._id;
-    this.image = book.image;
+  constructor(book) {
+    this.cover = book.cover;
     this.title = book.title;
     this.author = book.author;
     this.numPages = book.numPages;
     this.pubDate = new Date(book.pubDate);
-}};
+    this.edit = book.edit;
+    this._id = book._id;
+  }
+};
 
 class Library {
   constructor(libraryKey) {
@@ -16,12 +16,11 @@ class Library {
     this.libraryKey = libraryKey;
   }
 
-
   init() {
     this.$addBookBtn = $("#addBookBtn");
     this.$update = $("update");
     this.$getRandomBook = $("#getRandomBook");
-    this.getLibrary();//replace with ajax request for Get
+    this._getBookAjax();
     this._setUpTable();
     this._bindEvents();
     return false;
@@ -31,9 +30,11 @@ class Library {
     this.$addBookBtn.on("click", $.proxy(this._btnAddABook, this));
     this.$update.on("updateLibrary", $.proxy(this._handleUpdateLibrary, this));
     this.$getRandomBook.on("click", $.proxy(this._handlegetRandomBook, this));
+    this.$myTable.on("click", $.proxy(this._removeRow, this));
     $(document).on("click", ".delete", $.proxy(this._removeRow, this));
     $("#authorsModal").on("show.bs.modal", $.proxy(this._handlegetAuthors, this));
     $("#authorsInLibrary").on("click", ".authorHTML", $.proxy(this._handleremoveBooksbyAuthor, this));
+
     return false;
   };
 
@@ -44,6 +45,12 @@ class Library {
 
   _handlegetRandomBook() {
     this.displayRandomBook();
+  };
+
+  _handleDeleteLibrary(e){
+    let row = $(e.currentTarget).parent().parent().remove();
+    this._removeRow();
+      return true;
   };
 
   _handleremoveBooksbyAuthor(e) {
@@ -67,16 +74,16 @@ class Library {
   };
 
   _setUpTable() {
-    let books = this.bookCollection;
-    this.myTable = $("#myTable").DataTable({
+  console.log(this.bookCollection);
+    this.$myTable = $("#myTable").DataTable({
       data: this.bookCollection,
       columns: [{
-        {
-          data: "id"
+          data: "_id"
         },
-          data: "image",
+        {
+          data: "cover",
           render: function(data, type, row, meta) {
-            return (" <img class=\"cover\" src=" + row.image + ">");
+            return (" <img class=\"cover\" src=" + row.cover + ">");
           }
         },
         {
@@ -99,6 +106,12 @@ class Library {
           }
         },
         {
+          data: "edit",
+          render: function(data, type, row, meta) {
+            return ("<button class='btn btn-info editBook'>Edit</button>");
+        }
+      },
+        {
           "orderable": false,
           data: "icons",
           render: function(data, type, row, meta) {
@@ -111,19 +124,20 @@ class Library {
   };
 
   _removeRow(e) {
-    $(e.currentTarget).parent().parent().remove();
+    // let row = (e.currentTarget).parent().parent("tr");
     let parsedHTML = $.parseHTML($(e.currentTarget).parent().parent("tr").html());
-    let title = $(parsedHTML[2]).html();
-    if (confirm("Are you sure you want to delete this row?")) {
+    let title = $(parsedHTML[2]);
+    let _id = $(parsedHTML[0]);
+    if (confirm("Are you sure you want to delete this book? " + title)) {
       this.removeBookbyTitle(title);
-      this.setLibrary();
+      // this.setLibrary();
     }
   };
 
   _btnAddABook() {
-    let image = $('#exampleFormControlFile1').val();
-    image = image.replace("C:\\fakepath\\", "");
-    image = "img/img125px/" + image;
+    let cover = $('#coverImage').val();
+    cover = cover.replace("C:\\fakepath\\", "");
+    cover = "img/img125px/" + cover;
     let title = $('#addBookInput1').val();
     let author = $('#addBookInput2').val();
     let numPages = $('#addBookInput3').val();
@@ -135,7 +149,7 @@ class Library {
     };
 
     this.addBook(new Book({
-      image: image,
+      cover: cover,
       title: title,
       author: author,
       numPages: numPages,
@@ -159,16 +173,17 @@ class Library {
       }
     }
     this.bookCollection.push(book);
-    this.addBookAjax();//Post
+    this.addBookAjax(); //Post
     this.updateLibrary();
-    this.setLibrary();
+    // this.setLibrary();
     return true;
   };
 
   //remove book title
-  removeBookbyTitle(title) {
+  removeBookbyTitle(title, _id) {
     for (let i = 0; i < this.bookCollection.length; i++) {
       if (this.bookCollection[i].title === title) {
+        this.deleteBookAjax(_id);
         this.bookCollection.splice(i, 1);
         this.updateLibrary();
         return true;
@@ -182,9 +197,10 @@ class Library {
     let result = false;
     for (let i = this.bookCollection.length - 1; i >= 0; i--) {
       if (this.bookCollection[i].author === author) {
+        this.deleteBookAjax(this.bookCollection[i]);
         this.bookCollection.splice(i, 1);
         this.updateLibrary();
-        this.setLibrary();
+        // this.setLibrary();
         result = true;
       }
     }
@@ -200,13 +216,13 @@ class Library {
   };
 
   // Need to finish this
-  displayImage() {
-    $("#coverImg").attr("src", "image");
+  displaycover() {
+    $("#coverImg").attr("src", "cover");
   };
 
   displayRandomBook() {
     let book = this.getRandomBook();
-    $('#coverImg').attr('src', book.image);
+    $('#coverImg').attr('src', book.cover);
     $('#randomTitle').text(book.title);
     $('#randomAuthor').text(book.author);
     $('#randomNumPages').text(book.numPages);
@@ -283,53 +299,101 @@ class Library {
     return bookSelection;
   };
 
-  getBookAjax() {
+  _getBookAjax() {
+    let _this = this;
+    $.ajax({
+        dataType: 'json',
+        type: "GET",
+        url: "http://localhost:3000/library/"
+      })
+      .done(function(response) {
+        // console.log(response);
+        for (var i = 0; i < response.length; i++) {
+          let book = new Book(response[i]);
+          // console.log(book);
+          _this.$myTable.row.add(book);
+          _this.bookCollection.push(book);
+        }
+        _this.$myTable.draw();
+        // console.log(this.bookCollection);
+
+      }).fail(function() {
+        console.log("Your GET request has failed");
+      });
+  }
+
+  addBookAjax() {
+    $.ajax({
+        dataType: 'json',
+        type: "POST",
+        url: "http://localhost:3000/library/",
+        data: {
+          cover: $('#coverImage').val(),
+          title: $('#addBookInput1').val(),
+          author: $('#addBookInput2').val(),
+          pubDate: $('#addBookInput4').val(),
+          numPages: $('#addBookInput3').val()
+        }
+      }).done(function(response) {})
+      .fail(function() {
+        console.log("Your POST request failed");
+      });
+  }
+
+  deleteBookAjax(_id) {
+    let _this = this;
     $.ajax({
       dataType: 'json',
-      type: "GET",
-      url: "http://localhost:3000/library/"
-    })
-    .done(function(response)){
-    let results=[];
-      for (var i = 0; i < response.length; i++) {
-        results.push(new Book(response[i]));
-      }
-      this.bookCollection = results;
-        console.log(results);
-            this.updateLibrary();
-    .fail(function(){
-      console.log("Your GET request has failed");
+      type: "DELETE",
+      url: "http://localhost:3000/library/" + _id,
+    }).done( function(response) {
+           }).fail( function(response) {
+             console.log(response);
     });
   }
 
+  // removeBookByIdFromLibrary(_id, callback) {
+  //        let _this = this;
+  //        $.ajax ({
+  //            url: "http://localhost:3000/library/" + _id,
+  //            dataType: "json",
+  //            type: "DELETE",
+  //        }).done( function(response) {
+  //            // console.log("delete success response")
+  //            callback(_id);
+  //        }).fail( function(response) {
+  //            // console.log("delete fail response")
+  //            callback(_id);
+  //            // _this.failedResponse(response);
+  //        });
+  //    }
 
-  addBookAjax() {
-        $.ajax({
-          dataType: 'json',
-          type: "POST",
-          url: "http://localhost:3000/library/",
-          data: {
-            image : $('#exampleFormControlFile1').val();
-            title : $('#addBookInput1').val();
-            author : $('#addBookInput2').val();
-            pubDate : $('#addBookInput4').val();
-            numPages : $('#addBookInput3').val();
-          }
-        }).done(function(response){
-          console.log(response)}).fail(function(){
-          console.log("Your POST request has failed");
-        });
-      }
+  getRandomBookAjax(books) {
+    $.ajax({
+        dataType: 'json',
+        type: "GET",
+        url: "http://localhost:3000/library/" + book._id,
+      })
+      .done(function(response) {})
+      .fail(function() {
+        console.log("Your GET request has failed");
+      });
+  }
 
-
-
-  })
 }
-  //stringify & localStorage
-  // setLibrary() {
-  //   localStorage.setItem(this.libraryKey, JSON.stringify(this.bookCollection));
-  //   return true;
-  // };
+//   }).done(function(response){
+//     console.log(response)}).fail(function(){
+//     console.log("Your POST request has failed");
+//   });
+// }
+
+//   })
+// }
+//stringify & localStorage
+// setLibrary() {
+//   localStorage.setItem(this.libraryKey, JSON.stringify(this.bookCollection));
+//   return true;
+// };
 
 //   getLibrary() {
 //     let tempArray = JSON.parse(localStorage.getItem(this.libraryKey));
@@ -343,105 +407,105 @@ class Library {
 //     }
 //   };
 // };
-//new Library
+
 let gLib = new Library("libraryStorage");
 
-$(document).ready(function(e) {
+$(document).ready(function() {
   var gLib = new Library("libraryStorage");
   gLib.init();
-  gLib.addBooks(myBooks);
+  // gLib.addBooks(myBooks);
 });
-
-const gIT = new Book({
-  image: "img/img125px/It.jpg",
-  title: "IT",
-  author: "King, Stephen",
-  numPages: 1169,
-  pubDate: "January 1, 2016"
-});
-const gTheStand = new Book({
-  image: "img/img125px/TheStand.jpg",
-  title: "The Stand",
-  author: "King, Stephen",
-  numPages: 1348,
-  pubDate: "June 24, 2008"
-});
-const gAPlaceToStand = new Book({
-  image: "img/img125px/APlacetoStand.jpg",
-  title: "A Place To Stand",
-  author: "Santiago Baca, Jimmy",
-  numPages: 276,
-  pubDate: "December 1, 2007"
-});
-const gGlutenFree1 = new Book({
-  image: "img/img125px/GlutenFree1.jpg",
-  title: "Gluten-Free on a Shoestring: 250 Easy Recipes for Eating Well on the Cheap",
-  author: "Hunn, Nicole",
-  numPages: 298,
-  pubDate: "October 10, 2017"
-});
-const gGlutenFree2 = new Book({
-  image: "img/img125px/GlutenFree2.jpg",
-  title: "Gluten-Free on a Shoestring Bakes Bread",
-  author: "Hunn, Nicole",
-  numPages: 203,
-  pubDate: "December 10, 2013"
-});
-const gCatcherInTheRye = new Book({
-  image: "img/img125px/Catcher.jpg",
-  title: "Catcher In The Rye",
-  author: "Salinger, JD ",
-  numPages: 200,
-  pubDate: "July 16, 1951"
-});
-const gGreenEggsAndHam = new Book({
-  image: "img/img125px/GreenEggs.jpg",
-  title: "Green Eggs And Ham",
-  author: "Seuss, Dr.",
-  numPages: 35,
-  pubDate: "August 12, 1960"
-});
-const gAWrinkleInTime = new Book({
-  image: "img/img125px/Wrinkle.jpg",
-  title: "A Wrinkle In Time",
-  author: "L'Engle, Madeleine",
-  numPages: 368,
-  pubDate: "September 20, 1968"
-});
-const gAHouseLikeaLotus = new Book({
-  image: "img/img125px/HouseLikeaLotus.jpg",
-  title: "A House Like a Lotus",
-  author: "L'Engle, Madeleine",
-  numPages: 336,
-  pubDate: "February 14, 2012"
-});
-const gTheodoreBooneKidLawyer = new Book({
-  image: "img/img125px/KidLawyer.jpg",
-  title: "Theodore Boone: Kid Lawyer",
-  author: "Grisham, John",
-  numPages: 273,
-  pubDate: "November 10, 2011"
-});
-const gTheodoreBooneTheActivist = new Book({
-  image: "img/img125px/TheActivist.jpg",
-  title: "Theodore Boone: The Activist",
-  author: "Grisham, John",
-  numPages: 373,
-  pubDate: "November 10, 2010"
-});
-const gTheodoreBooneTheAccused = new Book({
-  image: "img/img125px/TheAccused.jpg",
-  title: "Theodore Boone: The Accused",
-  author: "Grisham, John",
-  numPages: 253,
-  pubDate: "September 20, 2009"
-});
-const gTheodoreBooneTheFugitive = new Book({
-  image: "img/img125px/theFugitive.jpg",
-  title: "Theodore Boone: The Fugitive",
-  author: "Grisham, John",
-  numPages: 257,
-  pubDate: "May 12, 2011"
-});
-
-const myBooks = [gCatcherInTheRye, gAHouseLikeaLotus, gGreenEggsAndHam, gAWrinkleInTime, gTheodoreBooneKidLawyer, gTheodoreBooneTheAccused, gTheodoreBooneTheActivist, gTheodoreBooneTheFugitive, gAPlaceToStand, gTheStand, gIT, gGlutenFree1, gGlutenFree2];
+//
+// const gIT = new Book({
+//   cover: "img/img125px/It.jpg",
+//   title: "IT",
+//   author: "King, Stephen",
+//   numPages: 1169,
+//   pubDate: "January 1, 2016"
+// });
+// const gTheStand = new Book({
+//   cover: "img/img125px/TheStand.jpg",
+//   title: "The Stand",
+//   author: "King, Stephen",
+//   numPages: 1348,
+//   pubDate: "June 24, 2008"
+// });
+// const gAPlaceToStand = new Book({
+//   cover: "img/img125px/APlacetoStand.jpg",
+//   title: "A Place To Stand",
+//   author: "Santiago Baca, Jimmy",
+//   numPages: 276,
+//   pubDate: "December 1, 2007"
+// });
+// const gGlutenFree1 = new Book({
+//   cover: "img/img125px/GlutenFree1.jpg",
+//   title: "Gluten-Free on a Shoestring: 250 Easy Recipes for Eating Well on the Cheap",
+//   author: "Hunn, Nicole",
+//   numPages: 298,
+//   pubDate: "October 10, 2017"
+// });
+// const gGlutenFree2 = new Book({
+//   cover: "img/img125px/GlutenFree2.jpg",
+//   title: "Gluten-Free on a Shoestring Bakes Bread",
+//   author: "Hunn, Nicole",
+//   numPages: 203,
+//   pubDate: "December 10, 2013"
+// });
+// const gCatcherInTheRye = new Book({
+//   cover: "img/img125px/Catcher.jpg",
+//   title: "Catcher In The Rye",
+//   author: "Salinger, JD ",
+//   numPages: 200,
+//   pubDate: "July 16, 1951"
+// });
+// const gGreenEggsAndHam = new Book({
+//   cover: "img/img125px/GreenEggs.jpg",
+//   title: "Green Eggs And Ham",
+//   author: "Seuss, Dr.",
+//   numPages: 35,
+//   pubDate: "August 12, 1960"
+// });
+// const gAWrinkleInTime = new Book({
+//   cover: "img/img125px/Wrinkle.jpg",
+//   title: "A Wrinkle In Time",
+//   author: "L'Engle, Madeleine",
+//   numPages: 368,
+//   pubDate: "September 20, 1968"
+// });
+// const gAHouseLikeaLotus = new Book({
+//   cover: "img/img125px/HouseLikeaLotus.jpg",
+//   title: "A House Like a Lotus",
+//   author: "L'Engle, Madeleine",
+//   numPages: 336,
+//   pubDate: "February 14, 2012"
+// });
+// const gTheodoreBooneKidLawyer = new Book({
+//   cover: "img/img125px/KidLawyer.jpg",
+//   title: "Theodore Boone: Kid Lawyer",
+//   author: "Grisham, John",
+//   numPages: 273,
+//   pubDate: "November 10, 2011"
+// });
+// const gTheodoreBooneTheActivist = new Book({
+//   cover: "img/img125px/TheActivist.jpg",
+//   title: "Theodore Boone: The Activist",
+//   author: "Grisham, John",
+//   numPages: 373,
+//   pubDate: "November 10, 2010"
+// });
+// const gTheodoreBooneTheAccused = new Book({
+//   cover: "img/img125px/TheAccused.jpg",
+//   title: "Theodore Boone: The Accused",
+//   author: "Grisham, John",
+//   numPages: 253,
+//   pubDate: "September 20, 2009"
+// });
+// const gTheodoreBooneTheFugitive = new Book({
+//   cover: "img/img125px/theFugitive.jpg",
+//   title: "Theodore Boone: The Fugitive",
+//   author: "Grisham, John",
+//   numPages: 257,
+//   pubDate: "May 12, 2011"
+// });
+//
+// const myBooks = [gCatcherInTheRye, gAHouseLikeaLotus, gGreenEggsAndHam, gAWrinkleInTime, gTheodoreBooneKidLawyer, gTheodoreBooneTheAccused, gTheodoreBooneTheActivist, gTheodoreBooneTheFugitive, gAPlaceToStand, gTheStand, gIT, gGlutenFree1, gGlutenFree2];

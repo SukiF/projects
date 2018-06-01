@@ -66,3 +66,16 @@ color: white;
 .bg{
   background: linear-gradient(to bottom, #ccccff 0%, #000066 100%);
 }
+
+.cover{
+  height: 100px;
+}
+
+.btn-info{
+  background: #4f0b9b;
+}
+
+.btn-info:hover {
+    background: #fff;
+    color: #4f0b9b;
+}
