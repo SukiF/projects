@@ -123,12 +123,22 @@ class Library {
     this.tableApi = $("#myTable").dataTable();
   };
 
+  // _removeRow(e) {
+  //   // let row = (e.currentTarget).parent().parent("tr");
+  //   let parsedHTML = $.parseHTML($(e.currentTarget).parent().parent("tr").html());
+  //   let title = $(parsedHTML[2]);
+  //   let _id = $(parsedHTML[0]);
+  //   if (confirm("Are you sure you want to delete this book? " + title)) {
+  //     this.removeBookbyTitle(title);
+  //     // this.setLibrary();
+  //   }
+  // };
+
   _removeRow(e) {
-    // let row = (e.currentTarget).parent().parent("tr");
+    $(e.currentTarget).parent().parent().remove();
     let parsedHTML = $.parseHTML($(e.currentTarget).parent().parent("tr").html());
-    let title = $(parsedHTML[2]);
-    let _id = $(parsedHTML[0]);
-    if (confirm("Are you sure you want to delete this book? " + title)) {
+    let title = $(parsedHTML[2]).html();
+    if (confirm("Are you sure you want to delete this row?")) {
       this.removeBookbyTitle(title);
       // this.setLibrary();
     }
